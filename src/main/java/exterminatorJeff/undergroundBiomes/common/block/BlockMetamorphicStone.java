@@ -28,9 +28,9 @@ public class BlockMetamorphicStone extends BlockMetadataBase
         super(namer);
         this.setHardness(1.5F*UndergroundBiomes.hardnessModifier())
                 .setResistance(1.66F*UndergroundBiomes.resistanceModifier());
-            ubExplosionResistance = blockResistance;
+            this.ubExplosionResistance = this.blockResistance;
     }
-    @Override
+    /*@*//*Override*/
     public float getBlockHardness(int meta){
         return super.getBlockHardness(meta) * hardness[meta];
     }
@@ -73,7 +73,7 @@ public class BlockMetamorphicStone extends BlockMetadataBase
     public String getBlockName(int index) {
         return getBlockTypeName(index);
     }
-        @Override
+        /*@*//*Override*/
     public Item getItemDropped(int metadata, Random random, int fortune) {
         return Item.getItemById(UBIDs.metamorphicCobblestoneName.ID());
     }

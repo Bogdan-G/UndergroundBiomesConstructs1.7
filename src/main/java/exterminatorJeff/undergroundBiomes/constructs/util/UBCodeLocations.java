@@ -4,6 +4,9 @@ import java.util.HashMap;
 
 import Zeno410Utils.BlockLocation;
 import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
+import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlock;
+import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlockList;
+import java.util.HashMap;
 
 /**
  * This class can record locations where UB Constructs codes are used

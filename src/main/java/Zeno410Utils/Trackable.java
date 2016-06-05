@@ -1,7 +1,7 @@
 
 package Zeno410Utils;
 
-
+import Zeno410Utils.Acceptor;
 /**
  *
  * @author Zeno410

@@ -4,45 +4,41 @@
 
 package exterminatorJeff.undergroundBiomes.constructs;
 
-import exterminatorJeff.undergroundBiomes.api.UBIDs;
-import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
-import exterminatorJeff.undergroundBiomes.common.block.BlockMetadataBase;
-import exterminatorJeff.undergroundBiomes.common.block.BlockSedimentaryStone;
-
-import exterminatorJeff.undergroundBiomes.constructs.item.ItemUndergroundBiomesConstruct;
-import exterminatorJeff.undergroundBiomes.constructs.block.UBTEButtonGroup;
-import exterminatorJeff.undergroundBiomes.constructs.block.UBTEStairsGroup;
-import exterminatorJeff.undergroundBiomes.constructs.block.UBTEWallGroup;
-
-import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlockList;
-import exterminatorJeff.undergroundBiomes.constructs.entity.UndergroundBiomesTileEntity;
-
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockSlab;
-import net.minecraft.block.BlockStairs;
-import net.minecraft.block.BlockButtonStone;
-import net.minecraft.block.BlockWall;
-import net.minecraftforge.common.config.Configuration;
-import net.minecraft.util.IIcon;
-import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.item.ItemBlock;
-
+import Zeno410Utils.Mutable;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-
-import exterminatorJeff.undergroundBiomes.api.UndergroundBiomesSettings;
-import exterminatorJeff.undergroundBiomes.common.item.SwitchableRecipeGroup;
-import Zeno410Utils.Zeno410Logger;
 import exterminatorJeff.undergroundBiomes.api.NamedBlock;
+import exterminatorJeff.undergroundBiomes.api.UBIDs;
+import exterminatorJeff.undergroundBiomes.api.UndergroundBiomesSettings;
+import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
+import exterminatorJeff.undergroundBiomes.common.block.BlockMetadataBase;
+import exterminatorJeff.undergroundBiomes.common.block.BlockSedimentaryStone;
+import exterminatorJeff.undergroundBiomes.common.item.SwitchableRecipeGroup;
+//import exterminatorJeff.undergroundBiomes.constructs.IconTrap;
 import exterminatorJeff.undergroundBiomes.constructs.block.UBButtonBlockGroup;
 import exterminatorJeff.undergroundBiomes.constructs.block.UBStairsBlockGroup;
-import exterminatorJeff.undergroundBiomes.constructs.block.UBWall;
+import exterminatorJeff.undergroundBiomes.constructs.block.UBTEButtonGroup;
+import exterminatorJeff.undergroundBiomes.constructs.block.UBTEStairsGroup;
+import exterminatorJeff.undergroundBiomes.constructs.block.UBTEWallGroup;
 import exterminatorJeff.undergroundBiomes.constructs.block.UBWallBlockGroup;
-import exterminatorJeff.undergroundBiomes.constructs.item.ItemUBWall;
-import exterminatorJeff.undergroundBiomes.constructs.item.ItemUBWallBlock;
+import exterminatorJeff.undergroundBiomes.constructs.entity.UndergroundBiomesTileEntity;
+import exterminatorJeff.undergroundBiomes.constructs.item.ItemUndergroundBiomesConstruct;
+import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlockList;
+import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Collection;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockButtonStone;
+import net.minecraft.block.BlockSlab;
+import net.minecraft.block.BlockStairs;
+import net.minecraft.block.BlockWall;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.IIcon;
+import net.minecraftforge.common.config.Configuration;
 
 //@Mod(modid = "UndergroundBiomesConstructs", name = "Underground Biomes Constructs", version = "0.0.4")
 //@NetworkMod(clientSideRequired = true, serverSideRequired = true)

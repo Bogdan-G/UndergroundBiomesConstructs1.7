@@ -1,13 +1,12 @@
 package exterminatorJeff.undergroundBiomes.constructs.util;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import net.minecraft.item.Item;
-import net.minecraft.block.Block;
-
 import exterminatorJeff.undergroundBiomes.api.NamedBlock;
 import exterminatorJeff.undergroundBiomes.api.NamedItem;
+import exterminatorJeff.undergroundBiomes.constructs.util.Reregistrable;
+import java.util.HashSet;
+import java.util.Set;
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 
 /**
  * This class is for reregistring items that disappear from the item and block registries

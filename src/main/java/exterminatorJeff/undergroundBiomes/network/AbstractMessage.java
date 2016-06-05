@@ -3,13 +3,14 @@ package exterminatorJeff.undergroundBiomes.network;
 
 
 import Zeno410Utils.Streamer;
+import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufInputStream;
 import io.netty.buffer.ByteBufOutputStream;
-import io.netty.buffer.ByteBuf;
-
+import java.io.DataInput;
 import java.io.DataInputStream;
 import java.io.DataOutput;
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * An abstraction of IMessage to carry an object

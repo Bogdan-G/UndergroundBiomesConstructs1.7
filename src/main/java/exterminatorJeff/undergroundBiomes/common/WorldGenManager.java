@@ -1,37 +1,36 @@
 package exterminatorJeff.undergroundBiomes.common;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Random;
-
-import net.minecraft.world.ChunkPosition;
-import net.minecraft.world.gen.ChunkProviderGenerate;
-import net.minecraft.world.gen.ChunkProviderServer;
-import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.layer.*;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldServer;
-import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
-
-import Zeno410Utils.PlaneLocation;
 import Zeno410Utils.Accessor;
-import Zeno410Utils.Bomb;
+import Zeno410Utils.PlaneLocation;
+import Zeno410Utils.Zeno410Logger;
 import exterminatorJeff.undergroundBiomes.api.BiomeGenUndergroundBase;
+import exterminatorJeff.undergroundBiomes.api.UBStoneCodes;
+import exterminatorJeff.undergroundBiomes.api.UndergroundBiomeSet;
+import exterminatorJeff.undergroundBiomes.common.UBiomeCache;
+import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
 import exterminatorJeff.undergroundBiomes.worldGen.BiomeUndergroundCacheBlock;
 import exterminatorJeff.undergroundBiomes.worldGen.BiomeUndergroundDecorator;
 import exterminatorJeff.undergroundBiomes.worldGen.GenLayerUnderground;
+import exterminatorJeff.undergroundBiomes.worldGen.OreUBifier;
+import exterminatorJeff.undergroundBiomes.worldGen.UBChunkProvider;
+import exterminatorJeff.undergroundBiomes.worldGen.VillageStoneChanger;
+import java.lang.reflect.Field;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Random;
+import java.util.logging.Logger;
+import net.minecraft.world.ChunkPosition;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldServer;
+import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.ChunkProviderGenerate;
+import net.minecraft.world.gen.ChunkProviderServer;
+import net.minecraft.world.gen.layer.GenLayer;
+import net.minecraft.world.gen.layer.IntCache;
+import net.minecraftforge.event.terraingen.BiomeEvent;
 import net.minecraftforge.event.terraingen.BiomeEvent.GetVillageBlockID;
 import net.minecraftforge.event.terraingen.BiomeEvent.GetVillageBlockMeta;
-import exterminatorJeff.undergroundBiomes.worldGen.UBChunkProvider;
-import exterminatorJeff.undergroundBiomes.api.UndergroundBiomeSet;
-import exterminatorJeff.undergroundBiomes.worldGen.VillageStoneChanger;
-
-
-import Zeno410Utils.Zeno410Logger;
-import exterminatorJeff.undergroundBiomes.worldGen.OreUBifier;
-import java.util.logging.Logger;
-
-import java.lang.reflect.*;
+import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import net.minecraftforge.event.terraingen.PopulateChunkEvent;
 
 public class WorldGenManager {

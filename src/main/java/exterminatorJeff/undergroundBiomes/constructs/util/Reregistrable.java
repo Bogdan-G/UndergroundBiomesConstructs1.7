@@ -1,11 +1,9 @@
 package exterminatorJeff.undergroundBiomes.constructs.util;
 
-import net.minecraft.item.Item;
-import net.minecraft.block.Block;
-
-
 import exterminatorJeff.undergroundBiomes.api.NamedBlock;
 import exterminatorJeff.undergroundBiomes.api.NamedItem;
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 
 /**
  *

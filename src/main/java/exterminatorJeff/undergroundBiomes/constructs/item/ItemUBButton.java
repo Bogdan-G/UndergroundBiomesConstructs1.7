@@ -5,9 +5,10 @@ package exterminatorJeff.undergroundBiomes.constructs.item;
  * @author zeno410
  */
 
-import net.minecraft.block.Block;
-import exterminatorJeff.undergroundBiomes.api.UBIDs;
 import exterminatorJeff.undergroundBiomes.api.NamedItem;
+import exterminatorJeff.undergroundBiomes.api.UBIDs;
+import exterminatorJeff.undergroundBiomes.constructs.item.ItemUndergroundBiomesConstruct;
+import net.minecraft.block.Block;
 
 public class ItemUBButton extends ItemUndergroundBiomesConstruct{
 

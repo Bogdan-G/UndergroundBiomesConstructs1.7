@@ -5,22 +5,20 @@ package exterminatorJeff.undergroundBiomes.common.item;
  *
  * @author Zeno410
  */
-import java.util.HashMap;
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
-import net.minecraft.util.StatCollector;
-
 import exterminatorJeff.undergroundBiomes.api.NamedBlock;
 import exterminatorJeff.undergroundBiomes.api.NamedItem;
 import exterminatorJeff.undergroundBiomes.common.block.BlockUBHidden;
+import exterminatorJeff.undergroundBiomes.common.item.ItemMetadataBlock;
+import java.util.HashMap;
+import net.minecraft.block.Block;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 public class ItemUBHiddenBlock  extends ItemBlock {

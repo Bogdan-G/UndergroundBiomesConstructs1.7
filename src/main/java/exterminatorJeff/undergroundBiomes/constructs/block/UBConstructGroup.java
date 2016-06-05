@@ -11,10 +11,8 @@ package exterminatorJeff.undergroundBiomes.constructs.block;
 import exterminatorJeff.undergroundBiomes.common.block.BlockMetadataBase;
 import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlock;
 import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlockList;
-
 import java.util.ArrayList;
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 

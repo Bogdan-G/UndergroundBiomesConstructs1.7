@@ -1,7 +1,8 @@
 package exterminatorJeff.undergroundBiomes.constructs.item;
-import net.minecraft.block.Block;
-import exterminatorJeff.undergroundBiomes.api.UBIDs;
 import exterminatorJeff.undergroundBiomes.api.NamedItem;
+import exterminatorJeff.undergroundBiomes.api.UBIDs;
+import exterminatorJeff.undergroundBiomes.constructs.item.ItemUndergroundBiomesConstruct;
+import net.minecraft.block.Block;
 
 /**
  *

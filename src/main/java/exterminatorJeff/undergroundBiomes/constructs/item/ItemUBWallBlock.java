@@ -6,7 +6,7 @@ import exterminatorJeff.undergroundBiomes.api.UBIDs;
 import exterminatorJeff.undergroundBiomes.common.block.BlockMetadataBase;
 import exterminatorJeff.undergroundBiomes.constructs.block.UBWall;
 import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 

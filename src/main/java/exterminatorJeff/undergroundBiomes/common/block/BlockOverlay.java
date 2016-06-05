@@ -34,8 +34,7 @@ public class BlockOverlay extends Block{
         renderID = super.getRenderType();
 
     }
-    @SideOnly(Side.CLIENT)
-    @Override
+    @SideOnly(value=Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister){
         // Block icons registered by UB blocks.
         overlayTexture = iconRegister.registerIcon(overlayFileName);
@@ -44,12 +43,12 @@ public class BlockOverlay extends Block{
         super.registerBlockIcons(iconRegister);
     }
 
-    @Override
+    /*@*//*Override*/
     public IIcon getIcon(int p_149691_1_, int p_149691_2_) {
         return overlayTexture;
     }
 
-    @Override
+    /*@*//*Override*/
     public int getRenderType() {return renderID;}
 
     public static void showTextureNames(TextureMap textureMap) {

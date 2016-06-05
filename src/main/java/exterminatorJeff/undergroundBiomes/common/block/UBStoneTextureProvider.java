@@ -1,11 +1,10 @@
 package exterminatorJeff.undergroundBiomes.common.block;
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.util.IIcon;
-import net.minecraft.block.material.Material;
-
 import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlock;
 import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlockList;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.util.IIcon;
 
 /**
  *

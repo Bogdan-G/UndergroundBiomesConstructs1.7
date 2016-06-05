@@ -32,27 +32,27 @@ public class BlockIgneousCobblestone extends BlockIgneousStone
         }
 
     };
-    @Override
+    /*@*//*Override*/
     public ItemStack itemDropped(int metadata, Random random, int fortune, int y) {
         return new ItemStack(UBIDs.igneousCobblestoneName.block(), 1, metadata & 7);
     }
 
-    @Override
+    /*@*//*Override*/
     public boolean hasRareDrops(){
         return false;
     }
 
-    @Override
+    /*@*//*Override*/
     public String getBlockName(int index){
         return super.getBlockName(index) + "Cobble";
     }
 
-    @Override
+    /*@*//*Override*/
     public Item getItemDropped(int metadata, Random random, int fortune) {
         return Item.getItemById(UBIDs.igneousCobblestoneName.ID());
     }
 
-    @Override
+    /*@*//*Override*/
     public IIcon getIcon(int side, int metadata) {
         return super.getIcon(side, metadata);
     }

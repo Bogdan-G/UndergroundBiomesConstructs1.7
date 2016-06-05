@@ -3,13 +3,15 @@ package exterminatorJeff.undergroundBiomes.intermod;
 
 import exterminatorJeff.undergroundBiomes.api.BlockCodes;
 import exterminatorJeff.undergroundBiomes.api.UBAPIHook;
+import exterminatorJeff.undergroundBiomes.api.UBDimensionalStrataColumnProvider;
 import exterminatorJeff.undergroundBiomes.api.UBStrataColumn;
 import exterminatorJeff.undergroundBiomes.api.UBStrataColumnProvider;
-import highlands.worldgen.WorldGenMountain;
 import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldProvider;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 /**

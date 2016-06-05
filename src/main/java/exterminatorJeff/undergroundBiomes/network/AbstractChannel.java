@@ -1,6 +1,7 @@
 
 package exterminatorJeff.undergroundBiomes.network;
 
+import exterminatorJeff.undergroundBiomes.network.AbstractMessage;
 import net.minecraft.entity.player.EntityPlayer;
 
 /**

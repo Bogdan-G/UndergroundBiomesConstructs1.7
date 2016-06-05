@@ -1,9 +1,8 @@
 package exterminatorJeff.undergroundBiomes.constructs.util;
 import Zeno410Utils.Accessor;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
-
-
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.util.ObjectIntIdentityMap;

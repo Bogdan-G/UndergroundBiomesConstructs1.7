@@ -4,34 +4,31 @@
 
 
 package exterminatorJeff.undergroundBiomes.constructs.block;
+import Zeno410Utils.Zeno410Logger;
 import exterminatorJeff.undergroundBiomes.api.NamedBlock;
 import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
+import exterminatorJeff.undergroundBiomes.common.block.BlockMetadataBase;
+import exterminatorJeff.undergroundBiomes.constructs.entity.UndergroundBiomesTileEntity;
+import exterminatorJeff.undergroundBiomes.constructs.util.UBCodeLocations;
 import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlock;
 import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlockList;
-import exterminatorJeff.undergroundBiomes.constructs.entity.UndergroundBiomesTileEntity;
-
-import Zeno410Utils.Zeno410Logger;
-import java.util.logging.Logger;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
+import java.util.logging.Logger;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
+import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.util.IIcon;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.IIcon;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraft.entity.Entity;
-
-import exterminatorJeff.undergroundBiomes.common.block.BlockMetadataBase;
-import net.minecraft.client.renderer.texture.IIconRegister;
 
 public class UBStairsBase extends BlockStairs implements ITileEntityProvider{
 

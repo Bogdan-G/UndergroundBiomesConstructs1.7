@@ -4,7 +4,7 @@ package exterminatorJeff.undergroundBiomes.common.item;
 import Zeno410Utils.Acceptor;
 import Zeno410Utils.Mutable;
 import java.util.Collection;
-import java.util.Set;
+import java.util.List;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 

@@ -8,7 +8,6 @@ import exterminatorJeff.undergroundBiomes.common.block.BlockMetadataBase;
 import exterminatorJeff.undergroundBiomes.constructs.block.UBStairs;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemMultiTexture;

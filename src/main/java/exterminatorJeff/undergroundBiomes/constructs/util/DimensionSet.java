@@ -1,7 +1,6 @@
 package exterminatorJeff.undergroundBiomes.constructs.util;
 import Zeno410Utils.Zeno410Logger;
 import java.util.HashSet;
-
 import java.util.logging.Logger;
 /**
  * This class contains the logic for manipulating sets of dimensions in

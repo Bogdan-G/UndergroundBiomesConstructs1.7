@@ -1,8 +1,10 @@
 package exterminatorJeff.undergroundBiomes.common;
 
-import exterminatorJeff.undergroundBiomes.api.UBIDs;
-import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.IFuelHandler;
+import exterminatorJeff.undergroundBiomes.api.NamedItem;
+import exterminatorJeff.undergroundBiomes.api.UBIDs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 public class FuelManager implements IFuelHandler
 {

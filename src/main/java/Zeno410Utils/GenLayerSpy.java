@@ -1,9 +1,9 @@
 package Zeno410Utils;
 
-import net.minecraft.world.gen.layer.*;
+import Zeno410Utils.Zeno410Logger;
+import java.lang.reflect.Field;
 import java.util.logging.Logger;
-
-import java.lang.reflect.*;
+import net.minecraft.world.gen.layer.GenLayer;
 
 
 /**

@@ -4,28 +4,23 @@
  */
 
 package exterminatorJeff.undergroundBiomes.constructs.block;
-import exterminatorJeff.undergroundBiomes.api.NamedBlock;
+import Zeno410Utils.Zeno410Logger;
+import exterminatorJeff.undergroundBiomes.common.CreativeTabModBlocks;
 import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
-import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlockList;
-
 import exterminatorJeff.undergroundBiomes.common.block.BlockMetadataBase;
-
 import java.util.List;
 import java.util.Random;
-
+import java.util.logging.Logger;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockWall;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.util.IIcon;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraft.entity.Entity;
-
-import Zeno410Utils.Zeno410Logger;
-import java.util.logging.Logger;
-import net.minecraft.client.renderer.texture.IIconRegister;
 
 public class UBWall extends BlockWall {
 

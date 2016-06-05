@@ -23,7 +23,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-import clickme.nocubes.NoCubes;
+//import clickme.nocubes.NoCubes;
 
 public abstract class BlockMetadataBase extends BlockStone {
     public static boolean test963 = false;
@@ -34,6 +34,7 @@ public abstract class BlockMetadataBase extends BlockStone {
     private int renderID;
     protected float ubExplosionResistance;
     private final Acceptor<Double> hardnessUpdater = new Acceptor<Double>() {
+            @Override
             public void accept(Double newHardness) {
                 // we use the standard rather than the passed since we're having to cut back resistance
                 setHardness(1.5F*UndergroundBiomes.hardnessModifier());
@@ -42,6 +43,7 @@ public abstract class BlockMetadataBase extends BlockStone {
 
 
     private final Acceptor<Double> resistanceUpdater = new Acceptor<Double>() {
+            @Override
             public void accept(Double newResistance) {
                 // we use the standard rather than the passed since we're having to cut back resistance
                 setResistance(1.66F*UndergroundBiomes.resistanceModifier());
@@ -117,7 +119,7 @@ public abstract class BlockMetadataBase extends BlockStone {
     
 
     public float getBlockHardness(int meta){
-        float result =  blockHardness;
+        float result =  this.blockHardness;
         return result;
     }
 
@@ -128,12 +130,12 @@ public abstract class BlockMetadataBase extends BlockStone {
     
     public float getExplosionResistance(Entity entity, World world, int x, int y, int z, double explosionX, double explosionY, double explosionZ)
     {
-        return getBlockExplosionResistance(getDamageValue(world, x, y, z) & 7);
+        return getBlockExplosionResistance(this.getDamageValue(world, x, y, z) & 7);
     }
     
     public float getBlockHardness(World world, int x, int y, int z)
     {
-        return getBlockHardness(getDamageValue(world, x, y, z) & 7);
+        return getBlockHardness(this.getDamageValue(world, x, y, z) & 7);
     }
 
     protected ItemStack createStackedBlock(int metadata){
@@ -144,12 +146,12 @@ public abstract class BlockMetadataBase extends BlockStone {
         return new ItemStack(this, 1, metadata & 7);
     }
 
-    @Override
+    /*@*//*Override*/
     public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune){
         ArrayList<ItemStack> ret = new ArrayList<ItemStack>();
 
         int count = 1;
-        ItemStack stack = itemDropped(metadata, world.rand, fortune, y);
+        ItemStack stack = this.itemDropped(metadata, world.rand, fortune, y);
 
         if ((fortune != 0) && (UndergroundBiomes.fortuneAffected.contains(stack.getItem().getUnlocalizedName())))
         {

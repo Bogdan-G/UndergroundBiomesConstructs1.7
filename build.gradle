@@ -2,6 +2,10 @@ buildscript {
     repositories {
         mavenCentral()
         maven {
+            name 'prok'
+            url 'https://repo.prok.pw/'
+        }
+        maven {
             name = "forge"
             url = "http://files.minecraftforge.net/maven"
         }
@@ -23,8 +27,8 @@ archivesBaseName = "undergroundBiomes"
 //sourceSets.main.java{srcDirs project.projectDir.getPath() include("src/**")}
 //sourceSets.main.resources{srcDirs project.projectDir.getPath() include("resources/**")}
 
-//sourceCompatibility = JavaVersion.VERSION_1_7
-//targetCompatibility = JavaVersion.VERSION_1_7
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7
 //sourceCompatibility = 1.7
 //targetCompatibility = 1.7
 

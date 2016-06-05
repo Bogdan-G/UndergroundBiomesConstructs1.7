@@ -14,21 +14,21 @@ import net.minecraft.item.ItemStack;
 
 public class BlockIgneousStoneBrick extends BlockIgneousStone
 {
-
+    final float baseHardness;
     public BlockIgneousStoneBrick()
     {
         super(UBIDs.igneousStoneBrickName);
         replaceableByOre = false;
-        baseHardness = this.blockHardness;
+        this.baseHardness = this.blockHardness;
         UndergroundBiomes.instance().settings().brickHardnessMultiplier.informOnChange(hardnessUpdater);
         hardnessUpdater.accept(UndergroundBiomes.instance().settings().brickHardnessMultiplier.value());
     }
-    final float baseHardness;
+
     private final Acceptor<Double> hardnessUpdater = new Acceptor<Double>() {
 
         @Override
         public void accept(Double accepted) {
-            setHardness(baseHardness*accepted.floatValue());
+            setHardness(BlockIgneousStoneBrick.this.baseHardness*accepted.floatValue());
         }
 
     };
@@ -47,7 +47,7 @@ public class BlockIgneousStoneBrick extends BlockIgneousStone
         return super.getBlockName(index) + "Brick";
     }
 
-    @Override
+    /*@*//*Override*/
     public Item getItemDropped(int metadata, Random random, int fortune) {
         return Item.getItemById(UBIDs.igneousStoneBrickName.ID());
     }

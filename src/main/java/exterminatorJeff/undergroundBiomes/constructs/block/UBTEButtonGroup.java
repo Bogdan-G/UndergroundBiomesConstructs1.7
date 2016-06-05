@@ -5,16 +5,16 @@
  * Constructor for the button group
  */
 package exterminatorJeff.undergroundBiomes.constructs.block;
+import exterminatorJeff.undergroundBiomes.api.NamedBlock;
 import exterminatorJeff.undergroundBiomes.api.UBIDs;
 import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
+import exterminatorJeff.undergroundBiomes.common.block.BlockMetadataBase;
+import exterminatorJeff.undergroundBiomes.constructs.block.UBButtonBase;
+import exterminatorJeff.undergroundBiomes.constructs.block.UBConstructGroup;
 import exterminatorJeff.undergroundBiomes.constructs.item.ItemUBButton;
 import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlock;
-
-import cpw.mods.fml.common.registry.GameRegistry;
-
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;

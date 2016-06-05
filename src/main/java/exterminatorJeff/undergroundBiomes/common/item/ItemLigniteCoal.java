@@ -1,13 +1,15 @@
 package exterminatorJeff.undergroundBiomes.common.item;
 
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import exterminatorJeff.undergroundBiomes.api.NamedItem;
 import exterminatorJeff.undergroundBiomes.api.UBIDs;
+import exterminatorJeff.undergroundBiomes.common.CreativeTabModBlocks;
 import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.util.IIcon;
 
 public class ItemLigniteCoal extends Item
 {

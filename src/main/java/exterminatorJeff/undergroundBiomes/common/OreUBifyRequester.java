@@ -7,6 +7,8 @@ import com.teammetallurgy.metallurgy.metals.MetalBlock;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import exterminatorJeff.undergroundBiomes.api.UBAPIHook;
 import exterminatorJeff.undergroundBiomes.api.UBOreTexturizer;
+import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
+import exterminatorJeff.undergroundBiomes.worldGen.OreUBifier;
 import java.util.HashSet;
 import java.util.logging.Logger;
 import net.minecraft.block.Block;

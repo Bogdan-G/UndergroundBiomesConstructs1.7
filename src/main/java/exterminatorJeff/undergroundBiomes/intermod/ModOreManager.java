@@ -4,8 +4,10 @@ package exterminatorJeff.undergroundBiomes.intermod;
 import Zeno410Utils.Zeno410Logger;
 import exterminatorJeff.undergroundBiomes.api.UBAPIHook;
 import exterminatorJeff.undergroundBiomes.api.UBOreTexturizer;
+import java.util.Set;
 import java.util.logging.Logger;
 import net.minecraft.block.Block;
+import net.minecraft.util.RegistryNamespaced;
 
 /**
  *

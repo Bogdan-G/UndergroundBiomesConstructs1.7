@@ -1,9 +1,8 @@
 package exterminatorJeff.undergroundBiomes.common.command;
 
+import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
-
-import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
 
 public class CommandOreDictifyStone extends CommandBase
 {

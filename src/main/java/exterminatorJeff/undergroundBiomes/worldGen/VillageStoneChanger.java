@@ -5,12 +5,12 @@ import exterminatorJeff.undergroundBiomes.api.UBStoneCodes;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.init.Blocks;
-//import net.minecraftforge.event.terraingen.BiomeEvent.GetVillageBlockID;
-//import net.minecraftforge.event.terraingen.BiomeEvent.GetVillageBlockMeta;
+import net.minecraftforge.event.terraingen.BiomeEvent.GetVillageBlockID;
+import net.minecraftforge.event.terraingen.BiomeEvent.GetVillageBlockMeta;
 import net.minecraftforge.event.terraingen.BiomeEvent;
 import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
 
-//import cpw.mods.fml.common.eventhandler.Event.Result;
+import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.common.eventhandler.Event;
 
 /**

@@ -1,40 +1,38 @@
 package exterminatorJeff.undergroundBiomes.common;
 
 import Zeno410Utils.Acceptor;
-import exterminatorJeff.undergroundBiomes.api.UndergroundBiomeSetProvider;
-import exterminatorJeff.undergroundBiomes.api.UndergroundBiomesSettings;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.List;
-
-import net.minecraft.server.MinecraftServer;
-import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
-
-
-import net.minecraftforge.event.terraingen.BiomeEvent.GetVillageBlockID;
-import net.minecraftforge.event.terraingen.BiomeEvent.GetVillageBlockMeta;
-
-import cpw.mods.fml.common.Mod.*;
+import Zeno410Utils.Mutable;
+import Zeno410Utils.Zeno410Logger;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-
 import exterminatorJeff.undergroundBiomes.api.UBAPIHook;
 import exterminatorJeff.undergroundBiomes.api.UBDimensionalStrataColumnProvider;
+import exterminatorJeff.undergroundBiomes.api.UBSetProviderRegistry;
 import exterminatorJeff.undergroundBiomes.api.UBStrataColumnProvider;
-import exterminatorJeff.undergroundBiomes.worldGen.UBBlockProvider;
-
+import exterminatorJeff.undergroundBiomes.api.UndergroundBiomeSet;
+import exterminatorJeff.undergroundBiomes.api.UndergroundBiomeSetProvider;
+import exterminatorJeff.undergroundBiomes.api.UndergroundBiomesSettings;
+import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
+import exterminatorJeff.undergroundBiomes.common.WorldGenManager;
 import exterminatorJeff.undergroundBiomes.constructs.util.Consumable;
 import exterminatorJeff.undergroundBiomes.constructs.util.DimensionSet;
-import Zeno410Utils.Zeno410Logger;
-
-import cpw.mods.fml.common.IWorldGenerator;
-import exterminatorJeff.undergroundBiomes.api.UBSetProviderRegistry;
 import exterminatorJeff.undergroundBiomes.worldGen.OreUBifier;
 import exterminatorJeff.undergroundBiomes.worldGen.StandardUndergroundBiomeSet;
-import exterminatorJeff.undergroundBiomes.api.UndergroundBiomeSet;
+import exterminatorJeff.undergroundBiomes.worldGen.UBBlockProvider;
+import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldProvider;
 import net.minecraft.world.WorldServer;
+import net.minecraft.world.biome.WorldChunkManager;
+import net.minecraftforge.event.terraingen.BiomeEvent;
+import net.minecraftforge.event.terraingen.BiomeEvent.GetVillageBlockID;
+import net.minecraftforge.event.terraingen.BiomeEvent.GetVillageBlockMeta;
+import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import net.minecraftforge.event.terraingen.PopulateChunkEvent;
 /**
  *

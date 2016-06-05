@@ -1,23 +1,22 @@
 
 package exterminatorJeff.undergroundBiomes.intermod;
 
-import highlands.Highlands;
-import highlands.worldgen.WorldGenHighlandsShrub;
-import highlands.worldgen.WorldGenMountain;
-
-import java.util.Random;
-
-import net.minecraft.init.Blocks;
-import net.minecraft.world.World;
-import net.minecraft.world.gen.feature.WorldGenAbstractTree;
-import net.minecraft.world.gen.feature.WorldGenerator;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import exterminatorJeff.undergroundBiomes.intermod.WorldGenUBMountain;
+import highlands.Highlands;
 import highlands.biome.BiomeDecoratorHighlands;
 import highlands.biome.BiomeGenBaseHighlands;
+import highlands.worldgen.WorldGenHighlandsShrub;
+import java.util.List;
+import java.util.Random;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
+import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.gen.feature.WorldGenAbstractTree;
+import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class BiomeGenUBSnowMountains extends BiomeGenBaseHighlands
 {

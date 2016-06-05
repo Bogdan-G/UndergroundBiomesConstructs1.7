@@ -31,17 +31,17 @@ public class BlockIgneousStone extends BlockMetadataBase
             ubExplosionResistance = blockResistance;
     }
 
-    @Override
+    /*@*//*Override*/
     public float getBlockHardness(int meta){
         return super.getBlockHardness(meta) * hardness[meta];
     }
 
-    @Override
+    /*@*//*Override*/
     public float getBlockExplosionResistance(int meta){
         return super.getBlockExplosionResistance(meta) * resistance[meta];
     }
 
-    @Override
+    /*@*//*Override*/
     public ItemStack itemDropped(int metadata, Random random, int fortune, int y){
         // Very rare drops
         if ((metadata < 8) && (random.nextInt(1024) <= fortune))
@@ -59,7 +59,7 @@ public class BlockIgneousStone extends BlockMetadataBase
         return new ItemStack(UBIDs.igneousCobblestoneName.block(), 1, metadata & 7);
     }
 
-    @Override
+    /*@*//*Override*/
     public Item getItemDropped(int metadata, Random random, int fortune) {
         return Item.getItemById(UBIDs.igneousCobblestoneName.ID());
     }

@@ -1,6 +1,8 @@
 
 package Zeno410Utils;
+import Zeno410Utils.Function;
 import java.util.HashMap;
+import java.util.Set;
 
 /**
  * This class keeps a registry of keyed objects, generating new ones as necessary

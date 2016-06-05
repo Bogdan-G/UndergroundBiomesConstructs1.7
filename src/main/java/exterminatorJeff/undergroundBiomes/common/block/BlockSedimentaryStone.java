@@ -6,6 +6,7 @@ import exterminatorJeff.undergroundBiomes.api.NamedVanillaItem;
 import exterminatorJeff.undergroundBiomes.api.UBIDs;
 import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
 import exterminatorJeff.undergroundBiomes.common.block.BlockMetadataBase;
+import exterminatorJeff.undergroundBiomes.common.item.ItemFossilPiece;
 import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

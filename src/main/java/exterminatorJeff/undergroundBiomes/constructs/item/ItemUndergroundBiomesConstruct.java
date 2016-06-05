@@ -1,25 +1,24 @@
 package exterminatorJeff.undergroundBiomes.constructs.item;
 
+import Zeno410Utils.Zeno410Logger;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import exterminatorJeff.undergroundBiomes.api.NamedItem;
-import exterminatorJeff.undergroundBiomes.constructs.util.Reregistrable;
 import exterminatorJeff.undergroundBiomes.common.block.UBStoneTextureProvider;
+import exterminatorJeff.undergroundBiomes.constructs.util.Reregistrable;
 import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlock;
 import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlockList;
-
+import java.util.logging.Logger;
 import net.minecraft.block.Block;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemMultiTexture;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-
-import Zeno410Utils.Zeno410Logger;
-import java.util.logging.Logger;
 
 /**
  *

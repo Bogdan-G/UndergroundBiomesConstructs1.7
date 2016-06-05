@@ -1,11 +1,13 @@
 
 package exterminatorJeff.undergroundBiomes.intermod;
 
+import exterminatorJeff.undergroundBiomes.intermod.WorldGenBoulders;
 import highlands.biome.BiomeDecoratorHighlands;
 import highlands.biome.BiomeGenBaseHighlands;
 import highlands.biome.BiomeGenCliffs;
 import java.util.Random;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockTallGrass;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;

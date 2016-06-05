@@ -5,18 +5,13 @@
  */
 package exterminatorJeff.undergroundBiomes.constructs.entity;
 
-import net.minecraft.tileentity.TileEntity;
+import java.util.Set;
 import net.minecraft.nbt.NBTTagCompound;
-
 import net.minecraft.network.INetHandler;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
-
-import Zeno410Utils.Zeno410Logger;
-import java.util.logging.Logger;
-
-import java.util.Set;
+import net.minecraft.tileentity.TileEntity;
 
 public class UndergroundBiomesTileEntity extends TileEntity {
     public static String IndexName = "index";

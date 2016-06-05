@@ -4,18 +4,15 @@
 
 package exterminatorJeff.undergroundBiomes.constructs.item;
 
+import exterminatorJeff.undergroundBiomes.api.NamedItem;
+import exterminatorJeff.undergroundBiomes.api.UBIDs;
+import exterminatorJeff.undergroundBiomes.constructs.item.ItemUndergroundBiomesConstruct;
 import java.util.ArrayList;
-
 import net.minecraft.block.Block;
-
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-
-import exterminatorJeff.undergroundBiomes.api.UBIDs;
-import exterminatorJeff.undergroundBiomes.api.NamedItem;
-import net.minecraft.item.ItemStack;
 
 public class ItemUBStairs extends ItemUndergroundBiomesConstruct {
 

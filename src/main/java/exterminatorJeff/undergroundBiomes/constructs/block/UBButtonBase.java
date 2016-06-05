@@ -1,33 +1,30 @@
 package exterminatorJeff.undergroundBiomes.constructs.block;
 
-import net.minecraft.block.BlockButton;
-
-
-import exterminatorJeff.undergroundBiomes.api.NamedBlock;
-import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
-import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlock;
-import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlockList;
-import exterminatorJeff.undergroundBiomes.constructs.entity.UndergroundBiomesTileEntity;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
+import exterminatorJeff.undergroundBiomes.api.NamedBlock;
+import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
+import exterminatorJeff.undergroundBiomes.constructs.block.UBTEButtonGroup;
+import exterminatorJeff.undergroundBiomes.constructs.entity.UndergroundBiomesTileEntity;
+import exterminatorJeff.undergroundBiomes.constructs.util.UBCodeLocations;
+import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlock;
+import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlockList;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
 import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.util.IIcon;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.block.BlockButton;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.IIcon;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
 /**
  *

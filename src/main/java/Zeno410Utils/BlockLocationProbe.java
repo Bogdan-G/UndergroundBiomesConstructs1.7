@@ -1,6 +1,7 @@
 
 package Zeno410Utils;
 
+import Zeno410Utils.BlockLocation;
 /**
  * This is a class for probing hash sets of BlockLocatable for having blocks
  * it differs in that coordinates can be changed

@@ -1,6 +1,7 @@
 
 package Zeno410Utils;
 
+import Zeno410Utils.KeyedRegistry;
 /**
  *
  * @author Zeno410

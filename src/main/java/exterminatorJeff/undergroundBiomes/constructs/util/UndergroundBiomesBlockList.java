@@ -1,8 +1,9 @@
 package exterminatorJeff.undergroundBiomes.constructs.util;
 
-import net.minecraft.block.Block;
 import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
 import exterminatorJeff.undergroundBiomes.common.block.BlockMetadataBase;
+import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlock;
+import net.minecraft.block.Block;
 
 /**
  *
