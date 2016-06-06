@@ -530,21 +530,21 @@ public class UndergroundBiomes implements IWorldGenerator{
     private boolean forceRemap;
     @EventHandler
     public void onMissingMapping(FMLMissingMappingsEvent event) {
-        if (1>0) return;
-       logger.info("missing mappings");
+        /*if (1>0) */return;//WTF
+       /*logger.info("missing mappings");
        forceRemap = false;
         for (FMLMissingMappingsEvent.MissingMapping missing: event.get()) {
             //logger.info(missing.name + " " + missing.type.toString());
             if (missing.name.equalsIgnoreCase("UndergroundBiomes:sedimentaryStoneItem")) forceRemap = true;
-        }
+        }*/
     }
 
     @EventHandler
     public void adjustMappings(FMLModIdMappingEvent event) {
 
         boolean oldIDs = false;
-        if (1>0) return;
-        logger.info("remapping");
+        /*if (1>0) */return;//WTF
+        /*logger.info("remapping");
         ImmutableList<FMLModIdMappingEvent.ModRemapping> remappings =  event.remappedIds;
 
         Iterator<FMLModIdMappingEvent.ModRemapping> list = remappings.iterator();
@@ -589,7 +589,7 @@ public class UndergroundBiomes implements IWorldGenerator{
             logger.info("forcing");
             this.runningConfigIDs = true;
             forceRemap = false;
-        }
+        }*/
     }
 
     public void addRecipes() {
@@ -1076,7 +1076,7 @@ public class UndergroundBiomes implements IWorldGenerator{
         }
     }
 
-    public class EventWatcher {
+    public static class EventWatcher {
         public void processEvent(FMLEvent event) {
             //logger.info(event.getEventType());
         }

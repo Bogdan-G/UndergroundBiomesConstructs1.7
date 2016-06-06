@@ -95,10 +95,10 @@ public class BlockStoneSlab extends BlockSlab {
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister){
         //textures = new IIcon[8];
-        for(int i = 0; i < 8; i++)
-        {
+        //for(int i = 0; i < 8; i++)
+        //{
            // textures[i] = iconRegister.registerIcon("undergroundbiomes:" + referenceBlock.getBlockName(i));
-        }
+        //}
     }
 
     public String getFullSlabName(int index){
@@ -128,9 +128,9 @@ public class BlockStoneSlab extends BlockSlab {
         ArrayList<ItemStack> ret = new ArrayList<ItemStack>();
 
         Item item = getItemDropped(metadata, world.rand, fortune);
-        if (item != null) {
+        //if (item != null) {
             ret.add(new ItemStack(item, slabsDropped(),metadata&7));
-        }
+        //}
         return ret;
     }
 }

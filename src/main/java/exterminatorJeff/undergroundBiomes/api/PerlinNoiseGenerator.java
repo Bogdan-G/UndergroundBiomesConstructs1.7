@@ -2,6 +2,7 @@ package exterminatorJeff.undergroundBiomes.api;
 
 import exterminatorJeff.undergroundBiomes.api.NoiseGenerator;
 import java.util.Random;
+import org.bogdang.modifications.random.XSTR;
 
 /**
  * Generates noise using the "classic" perlin generator
@@ -45,7 +46,7 @@ public class PerlinNoiseGenerator extends NoiseGenerator {
      * @param seed Seed to construct this generator for
      */
     public PerlinNoiseGenerator(long seed) {
-        this(new Random(seed));
+        this(new XSTR(seed));
     }
 
     /**

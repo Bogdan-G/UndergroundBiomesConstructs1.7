@@ -58,7 +58,7 @@ public abstract class UBConstructGroup {
         /* the next two inner classes wrap references out of the package so descendent
         *  classes have minimal imports and couplings */
         
-        class StoneItemDefiner {
+        static class StoneItemDefiner {
             // this inner class hides the references to UndergroundBiomesBlockList
             final int stoneIndex;
 

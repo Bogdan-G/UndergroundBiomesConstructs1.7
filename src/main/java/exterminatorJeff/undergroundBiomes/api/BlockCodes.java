@@ -18,7 +18,7 @@ public class BlockCodes extends BlockState {
         super(block,metadata);
         name = null;
         onDrop = this;
-        metadataHashcode = new Integer(metadata).hashCode();
+        metadataHashcode = Integer.valueOf(metadata).hashCode();
     }
     
     public BlockCodes(NamedBlock namer, int metadata) {
@@ -28,14 +28,14 @@ public class BlockCodes extends BlockState {
             throw new RuntimeException("couldn't find block for "+namer.internal());
         }
         onDrop = this;
-        metadataHashcode = new Integer(metadata).hashCode();
+        metadataHashcode = Integer.valueOf(metadata).hashCode();
     }
 
     public BlockCodes(NamedBlock namer, int metadata, BlockCodes onDrop) {
         super(namer.block(),metadata);
         name = namer;
         this.onDrop = onDrop;
-        metadataHashcode = new Integer(metadata).hashCode();
+        metadataHashcode = Integer.valueOf(metadata).hashCode();
     }
 
     public int hashcode() {

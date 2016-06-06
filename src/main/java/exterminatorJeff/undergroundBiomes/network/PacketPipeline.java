@@ -226,7 +226,7 @@ public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, Abstra
         this.channels.get(Side.CLIENT).writeAndFlush(message);
     }
 
-    private class ChannelizedPacket<MessageType> extends AbstractPacket {
+    private static class ChannelizedPacket<MessageType> extends AbstractPacket {
         private final AbstractMessage<MessageType> message;
         private final Channel<MessageType> channel;
         ChannelizedPacket(AbstractMessage<MessageType> message, Channel channel){

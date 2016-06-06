@@ -25,7 +25,7 @@ public class ItemUBButtonBlock extends ItemMultiTexture {
     public static int top = 2;
 
     private static String names(Block appearance, NamedItem name,int metadata) {
-        String result = new String();
+        String result = "";//new String();
         BlockMetadataBase sourceBlock =((UBButton)appearance).baseStone();
         result = sourceBlock.getBlockTypeName(metadata)+"."+ name.internal();
         return result;

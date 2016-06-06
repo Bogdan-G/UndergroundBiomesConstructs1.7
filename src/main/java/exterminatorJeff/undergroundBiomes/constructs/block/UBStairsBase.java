@@ -88,11 +88,11 @@ public class UBStairsBase extends BlockStairs implements ITileEntityProvider{
     public final UndergroundBiomesTileEntity ubTileEntity(IBlockAccess world, int x, int y, int z) {
         UndergroundBiomesTileEntity result;
         TileEntity tileEntity = world.getTileEntity(x, y, z);
-        if (tileEntity == null) {
+        /*if (tileEntity == null) {
            //logger.info("no tile entity "+x + " "+ y + " "+z);
         } else {
            //logger.info("tile entity "+x + " "+ y + " "+z+ " " + tileEntity.toString());
-        }
+        }*/
         if (tileEntity instanceof UndergroundBiomesTileEntity) {
            result = (UndergroundBiomesTileEntity)tileEntity;
            return result;

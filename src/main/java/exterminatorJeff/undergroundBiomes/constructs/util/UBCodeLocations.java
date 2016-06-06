@@ -19,11 +19,11 @@ public class UBCodeLocations {
 
     public void add(int x, int y, int z, UndergroundBiomesBlock ubBlock) {
         BlockLocation location = BlockLocation.fetch(x,y,z);
-        if (stored.containsKey(location)) {
+        /*if (stored.containsKey(location)) {
             if (UndergroundBiomes.crashOnProblems()) {
                 //throw new RuntimeException();
             }
-        }
+        }*/
         stored.put(location, ubBlock);
     }
 

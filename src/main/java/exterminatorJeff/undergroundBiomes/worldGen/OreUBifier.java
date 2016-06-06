@@ -235,7 +235,7 @@ public final class OreUBifier {
 
     }
 
-    private class UBVersions {
+    private static class UBVersions {
         private final HashMap<BlockMetadataBase,BlockUBReplaceable> converter =
                 new HashMap<BlockMetadataBase,BlockUBReplaceable>();
         private final HashMap<BlockMetadataBase,ArrayList<BlockState>> convertedBlockStates =
@@ -315,7 +315,7 @@ public final class OreUBifier {
         return this.blockReplacer.item(ore).ubversions[metadata].convertedore(baseStone,stone.metadata);
     }
 
-    private class MetadataIndexedBlock {
+    private static class MetadataIndexedBlock {
         private Block [] blocks = new Block[16];
         public void set(Block block, int index) {
             blocks[index] = block;
@@ -324,7 +324,7 @@ public final class OreUBifier {
         public Block get(int index) {return blocks[index];}
     }
 
-    private class ReplacedOres {
+    private static class ReplacedOres {
         private HashMap<Block,boolean []> flags = new HashMap<Block,boolean []>();
 
         private boolean [] assuredFlags(Block block) {
@@ -364,7 +364,7 @@ public final class OreUBifier {
         public BlockStateReplacer replacer(int metadata);
     }
 
-    private class ConcreteBlockStateReplacer implements BlockStateReplacer {
+    private static class ConcreteBlockStateReplacer implements BlockStateReplacer {
         private final UBVersions versions;
         ConcreteBlockStateReplacer(UBVersions versions) {
             this.versions = versions;

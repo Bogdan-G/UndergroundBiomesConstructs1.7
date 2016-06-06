@@ -344,9 +344,9 @@ public class WorldGenManager {
             try {
                 //logger.info( "providing chunk "+world.getClass().getName());
                 Object result = iChunkProviderField.get(world);
-                if (result== null) {
+                //if (result== null) {
                     //logger.info( "no provider "+world.getClass().getName());
-                }
+                //}
                  return (IChunkProvider)result;
             } catch (IllegalArgumentException ex) {
                 throw new RuntimeException(ex);

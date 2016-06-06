@@ -154,10 +154,10 @@ public class DimensionManager implements UBSetProviderRegistry{
 
         // Sometimes can get called before onWorldLoad, wtf?
         WorldGenManager worldGen = worldGenManager(id);
-        if (worldGen == null) {
+        /*if (worldGen == null) {
             System.out.println("UndergroundBiomes warning: onBiomeDecorate before onWorldLoad! Ignoring.");
             return;
-        }
+        }*/
         //logger.info("decorating dimension "+ id );
         
                 // do nothing if being handled by in-chunk method
@@ -182,10 +182,10 @@ public class DimensionManager implements UBSetProviderRegistry{
 
         // Sometimes can get called before onWorldLoad, wtf?
         WorldGenManager worldGen = worldGenManager(id);
-        if (worldGen == null) {
+        /*if (worldGen == null) {
             System.out.println("UndergroundBiomes warning: onBiomeDecorate before onWorldLoad! Ignoring.");
             return;
-        }
+        }*/
         //logger.info("decorating dimension "+ id );
 
                 // do nothing if being handled by in-chunk method

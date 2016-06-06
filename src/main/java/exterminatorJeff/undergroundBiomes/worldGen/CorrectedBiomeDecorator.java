@@ -61,9 +61,9 @@ public class CorrectedBiomeDecorator extends BiomeDecorator {
         if (this.yellowFlowerGen == null) {
             this.yellowFlowerGen = new WorldGenFlowers(Blocks.yellow_flower);
         }
-        if (super.yellowFlowerGen == null) {
+        /*if (super.yellowFlowerGen == null) {
             super.yellowFlowerGen = new WorldGenFlowers(Blocks.yellow_flower);
-        }
+        }*/
         super.decorateChunk(p_150512_1_, p_150512_2_, p_150512_3_, p_150512_4_, p_150512_5_);
         currentWorld = wasDecorating;
         randomGenerator = randomizer;

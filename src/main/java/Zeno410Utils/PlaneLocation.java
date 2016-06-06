@@ -38,7 +38,7 @@ public class PlaneLocation {
         return result;
     }
 
-    public abstract class Provider {
+    public abstract static class Provider {
         abstract public PlaneLocation planeLocation();
     }
     @Override

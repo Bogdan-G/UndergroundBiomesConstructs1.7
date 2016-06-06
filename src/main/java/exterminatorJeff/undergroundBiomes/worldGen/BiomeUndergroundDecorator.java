@@ -98,9 +98,9 @@ public class BiomeUndergroundDecorator {
         BlockLocation chunkLocation = new BlockLocation(par_x,par_z, currentWorld.provider.dimensionId);
         // abort if this chunk is already being generated
         if (this.beingGenerated.contains(chunkLocation)) return;
-        if (this.beingGenerated.size() ==0) {
+        //if (this.beingGenerated.size() ==0) {
 
-        }
+        //}
         beingGenerated.add(chunkLocation);
         int generationHeight = UndergroundBiomes.generateHeight();
         BiomeGenUndergroundBase[] undergroundBiomesForGeneration= new BiomeGenUndergroundBase[256];
@@ -179,9 +179,9 @@ public class BiomeUndergroundDecorator {
                 UBStoneCodes defaultColumnStone = currentBiome.fillerBlockCodes;
                 for(int y = 1; y < generationHeight; y++) {
                     Block currentBlock = currentWorld.getBlock(x, y, z);
-                    if (x == 963) if (z== 963) {
+                    //if (x == 963) if (z== 963) {
                         //logger.info(""+y+" "+currentBlock.toString());
-                    }
+                    //}
                     // skip if air;
                     if (Block.isEqualTo(Blocks.air, currentBlock)) continue;
                     if (Block.isEqualTo(Blocks.water, currentBlock)) continue;
@@ -422,7 +422,7 @@ public class BiomeUndergroundDecorator {
 
     }
 
-    private class VanillaDecoratorCorrector implements BiomeDecoratorCorrector {
+    private static class VanillaDecoratorCorrector implements BiomeDecoratorCorrector {
         Class standardDecoratorClass = BiomeDecorator.class;
 
         public BiomeDecorator corrected(BiomeGenBase biome, BiomeDecorator currentDecorator) {
@@ -433,7 +433,7 @@ public class BiomeUndergroundDecorator {
         }
     }
 
-    private class BoPDecoratorCorrector implements BiomeDecoratorCorrector {
+    private static class BoPDecoratorCorrector implements BiomeDecoratorCorrector {
         Class standardDecoratorClass = BiomeDecorator.class;
 
         public BiomeDecorator corrected(BiomeGenBase biome, BiomeDecorator currentDecorator) {
@@ -444,7 +444,7 @@ public class BiomeUndergroundDecorator {
         }
     }
 
-    private class HighlandsDecoratorCorrector implements BiomeDecoratorCorrector {
+    private static class HighlandsDecoratorCorrector implements BiomeDecoratorCorrector {
         Class standardDecoratorClass = BiomeDecoratorHighlands.class;
 
         public BiomeDecorator corrected(BiomeGenBase biome, BiomeDecorator currentDecorator) {

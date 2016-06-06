@@ -159,7 +159,7 @@ public class CorrectedBiomeDecoratorHighlands extends BiomeDecoratorHighlands{
         for (j = 0; doGen && j < i; ++j)
 
         {
-            if (randomizer == null) throw new RuntimeException("no randomizer");
+            //if (randomizer == null) throw new RuntimeException("no randomizer");
             k = mcthis.chunk_X + randomizer.nextInt(16) + 8;
             l = mcthis.chunk_Z + randomizer.nextInt(16) + 8;
             i1 = world.getHeightValue(k, l);

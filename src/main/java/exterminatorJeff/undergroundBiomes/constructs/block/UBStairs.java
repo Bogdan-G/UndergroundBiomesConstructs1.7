@@ -82,14 +82,14 @@ public class UBStairs extends BlockStairs {
         throw new RuntimeException("metadata "+metadata);*/
         //return this.baseStone.getIcon(side, lowerMetadata());
         if (metadata>7) {
-            if (currentIcon != null&& false) {
+            /*if (currentIcon != null&& false) {//WTF, always false
                 IIcon result = currentIcon;
                 if (side >=5) {
                      currentIcon = null;
                      renderingItem = false;
                 }
                 return result;
-            }
+            }*/
             if (side >=6) {
                  renderingItem = false;
             }
@@ -125,14 +125,14 @@ public class UBStairs extends BlockStairs {
         //if (metadata <8) throw new RuntimeException("metadata "+metadata);
         //if (metadata > 0) return baseStone.getIcon(side, lowerMetadata()+1);
         if (metadata>7) {
-            if (currentIcon != null&&false) {
+            /*if (currentIcon != null&&false) {
                 IIcon result = currentIcon;
                 if (side >=5) {
                      currentIcon = null;
                      renderingItem = false;
                 }
                 return result;
-            }
+            }*/
             if (side >=6) {
                  renderingItem = false;
             }
