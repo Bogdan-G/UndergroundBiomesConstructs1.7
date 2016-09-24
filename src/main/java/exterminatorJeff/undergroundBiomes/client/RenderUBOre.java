@@ -44,11 +44,13 @@ public class RenderUBOre implements ISimpleBlockRenderingHandler {
     @Override
     public void renderInventoryBlock(Block block, int metadata, int modelID, RenderBlocks renderer) {
         //logger.info("rendering");
+        GL11.glPushMatrix();
         Block stoneBlock = ubifier.baseStone(block);
         Block overlayBlock = ubifier.overlayBlock(block);
         renderOreBlockAsItem(stoneBlock, overlayBlock, metadata, 1.0F,renderer);
         //renderOreBlockAsItem(overlayBlock, metadata, 1.0F,renderer);
         //renderer.renderBlockAsItem(ubifier.overlayBlock(block), metadata, 1.0F);
+        GL11.glPopMatrix();
     }
     
     public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z, Block block, int modelId, RenderBlocks renderer) {
@@ -56,6 +58,7 @@ public class RenderUBOre implements ISimpleBlockRenderingHandler {
 
 
         metadata = metadata & 7;
+        GL11.glPushMatrix();
         //logger.info(" at "+x+ ","+y+ ","+z+ ":"+metadata);
         int i = x;
         int j = y;
@@ -69,6 +72,7 @@ public class RenderUBOre implements ISimpleBlockRenderingHandler {
         if (overlayTexture != null) {
             renderer.renderBlockUsingTexture(ubifier.baseStone(renderedBlock), x, y, z, overlayTexture);
         }
+        GL11.glPopMatrix();
 
         return true;
     }

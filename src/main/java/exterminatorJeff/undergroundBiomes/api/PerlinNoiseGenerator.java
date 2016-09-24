@@ -55,9 +55,9 @@ public class PerlinNoiseGenerator extends NoiseGenerator {
      * @param rand Random to construct with
      */
     public PerlinNoiseGenerator(Random rand) {
-        offsetX = rand.nextDouble() * 256;
-        offsetY = rand.nextDouble() * 256;
-        offsetZ = rand.nextDouble() * 256;
+        offsetX = rand.nextFloat() * 256;
+        offsetY = rand.nextFloat() * 256;
+        offsetZ = rand.nextFloat() * 256;
 
         for (int i = 0; i < 256; i++) {
             perm[i] = rand.nextInt(256);

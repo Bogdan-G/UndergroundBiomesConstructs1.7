@@ -36,12 +36,15 @@ public class WorldGenUndergroundUB extends WorldGenerator
     public boolean generate(World par1World, Random par2Random, int par3, int par4, int par5)
     {
         float var6 = par2Random.nextFloat() * (float)Math.PI;
-        double var7 = (double)((float)(par3 + 8) + MathHelper.sin(var6) * (float)this.numberOfBlocks / 8.0F);
-        double var9 = (double)((float)(par3 + 8) - MathHelper.sin(var6) * (float)this.numberOfBlocks / 8.0F);
-        double var11 = (double)((float)(par5 + 8) + MathHelper.cos(var6) * (float)this.numberOfBlocks / 8.0F);
-        double var13 = (double)((float)(par5 + 8) - MathHelper.cos(var6) * (float)this.numberOfBlocks / 8.0F);
-        double var15 = (double)(par4 + par2Random.nextInt(3) - 2);
-        double var17 = (double)(par4 + par2Random.nextInt(3) - 2);
+        float msin = MathHelper.sin(var6);
+        float msqrt = (float)Math.sqrt(1 - msin*msin);
+        float nob8 = (float)this.numberOfBlocks / 8.0f;
+        float var7 = ((float)(par3 + 8) + msin * nob8);
+        float var9 = ((float)(par3 + 8) - msin * nob8);
+        float var11 = ((float)(par5 + 8) + msqrt * nob8);
+        float var13 = ((float)(par5 + 8) - msqrt * nob8);
+        float var15 = (par4 + par2Random.nextInt(3) - 2);
+        float var17 = (par4 + par2Random.nextInt(3) - 2);
 
         int dimension = par1World.provider.dimensionId;
         UBStrataColumnProvider columnProvider =
@@ -50,37 +53,40 @@ public class WorldGenUndergroundUB extends WorldGenerator
                 BlockCodes blockCodes = columnProvider.strataColumn(par3, par5).stone(par4);
         for (int var19 = 0; var19 <= this.numberOfBlocks; ++var19)
         {
-            double var20 = var7 + (var9 - var7) * (double)var19 / (double)this.numberOfBlocks;
-            double var22 = var15 + (var17 - var15) * (double)var19 / (double)this.numberOfBlocks;
-            double var24 = var11 + (var13 - var11) * (double)var19 / (double)this.numberOfBlocks;
-            double var26 = par2Random.nextDouble() * (double)this.numberOfBlocks / 16.0D;
-            double var28 = (double)(MathHelper.sin((float)var19 * (float)Math.PI / (float)this.numberOfBlocks) + 1.0F) * var26 + 1.0D;
-            double var30 = (double)(MathHelper.sin((float)var19 * (float)Math.PI / (float)this.numberOfBlocks) + 1.0F) * var26 + 1.0D;
-            int var32 = MathHelper.floor_double(var20 - var28 / 2.0D);
-            int var33 = MathHelper.floor_double(var22 - var30 / 2.0D);
-            int var34 = MathHelper.floor_double(var24 - var28 / 2.0D);
-            int var35 = MathHelper.floor_double(var20 + var28 / 2.0D);
-            int var36 = MathHelper.floor_double(var22 + var30 / 2.0D);
-            int var37 = MathHelper.floor_double(var24 + var28 / 2.0D);
+            float vnob = (float)var19 / (float)this.numberOfBlocks;
+            float var20 = var7 + (var9 - var7) * vnob;
+            float var22 = var15 + (var17 - var15) * vnob;
+            float var24 = var11 + (var13 - var11) * vnob;
+            float var26 = par2Random.nextFloat() * nob8 / 2.0f;
+            float var28 = ((MathHelper.sin((float)var19 * (float)Math.PI / (float)this.numberOfBlocks) + 1.0f) * var26 + 1.0f) / 2.0f;
+            //float var30 = (float)(MathHelper.sin((float)var19 * (float)Math.PI / (float)this.numberOfBlocks) + 1.0f) * var26 + 1.0f;
+            int var32 = MathHelper.floor_float(var20 - var28);
+            int var33 = MathHelper.floor_float(var22 - var28);
+            int var34 = MathHelper.floor_float(var24 - var28);
+            int var35 = MathHelper.floor_float(var20 + var28);
+            int var36 = MathHelper.floor_float(var22 + var28);
+            int var37 = MathHelper.floor_float(var24 + var28);
 
             for (int var38 = var32; var38 <= var35; ++var38)
             {
-                double var39 = ((double)var38 + 0.5D - var20) / (var28 / 2.0D);
+                float var39 = (var38 + 0.5f - var20) / (var28);
+                float var39n2 = var39 * var39;
 
-                if (var39 * var39 < 1.0D)
+                if (var39n2 < 1.0f)
                 {
                     for (int var41 = var33; var41 <= var36; ++var41)
                     {
-                        double var42 = ((double)var41 + 0.5D - var22) / (var30 / 2.0D);
+                        float var42 = (var41 + 0.5f - var22) / (var28);
+                        float var42n2 = var42 * var42;
 
-                        if (var39 * var39 + var42 * var42 < 1.0D)
+                        if (var39n2 + var42n2 < 1.0f)
                         {
                             for (int var44 = var34; var44 <= var37; ++var44)
                             {
-                                double var45 = ((double)var44 + 0.5D - var24) / (var28 / 2.0D);
+                                float var45 = (var44 + 0.5f - var24) / (var28);
 
                                 Block block = par1World.getBlock(var38, var41, var44);
-                                if (var39 * var39 + var42 * var42 + var45 * var45 < 1.0D && (block != null && (block == IDtoReplace ||
+                                if (var39n2 + var42n2 + var45 * var45 < 1.0f && (block != null && (block == IDtoReplace ||
                                 		(IDtoReplace == Blocks.dirt && block == Blocks.grass))))
                                 {
                                 	if(par1World.isAirBlock(var38, var41+1, var44) && minableBlockId == Blocks.dirt)
