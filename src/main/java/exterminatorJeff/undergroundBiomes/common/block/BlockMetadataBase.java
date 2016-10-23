@@ -55,6 +55,7 @@ public abstract class BlockMetadataBase extends BlockStone {
         super();
         this.setBlockName(block.internal());
         this.setCreativeTab(UndergroundBiomes.tabModBlocks);
+        this.setHarvestLevel("pickaxe", 2);
         namer = block;
         try {
             renderID = super.getRenderType();
