@@ -135,7 +135,7 @@ public final class OreUBifier {
         //overlayName.replace("metallurgy:/", "metallurgy:");
         //overlayName = "Metallurgy:"+overlayName.substring("metallurgy:/".length());
         BlockOverlay overlay = new BlockOverlay(overlayName);
-        logger.info(metadataBlockName.localized() + " " + metadataBlockName.unlocalized());
+        cpw.mods.fml.common.FMLLog.info(metadataBlockName.localized() + " " + metadataBlockName.unlocalized());
 
         BlockState oreBlockState = new BlockState(oreBlock,metadata);
         BlockUBOre ubOre = new BlockUBMetadataOre(ubStone,oreBlockState,overlay,renderID,metadataBlockName);

@@ -249,7 +249,7 @@ public class UndergroundBiomes implements IWorldGenerator{
     }
 
     public static void throwIfTesting(RuntimeException toThrow,String logMessage) {
-        logger.info(logMessage);
+        cpw.mods.fml.common.FMLLog.info(logMessage);
         if (crashOnProblems()) throw toThrow;
     }
 
@@ -453,7 +453,7 @@ public class UndergroundBiomes implements IWorldGenerator{
 		//ThaumcraftApi.registerObjectTag(id, meta, (new ObjectTags()).add(EnumTag.VALUABLE, 58).add(EnumTag.LIGHT, 15));
             }
             catch (Exception e){
-                System.out.println("[UndergroundBiomes] Error while integrating with Thaumcraft");
+                cpw.mods.fml.common.FMLLog.info("[UndergroundBiomes] Error while integrating with Thaumcraft");
                 e.printStackTrace(System.err);
             }
         }
@@ -488,7 +488,7 @@ public class UndergroundBiomes implements IWorldGenerator{
             configManager.setWorldFile(worldLocation);
             this.dimensionManager.setupGenerators();
         } catch (NullPointerException e) {
-            logger.info(e.toString());
+            cpw.mods.fml.common.FMLLog.info(e.toString());
         }
     }
 
@@ -499,7 +499,7 @@ public class UndergroundBiomes implements IWorldGenerator{
         if (forceRemap) {
             this.forceConfigIDs();
             GameData.freezeData();
-            logger.info("forcing on remapping");
+            cpw.mods.fml.common.FMLLog.info("forcing on remapping");
             this.runningConfigIDs = true;
         }
     }
@@ -580,13 +580,13 @@ public class UndergroundBiomes implements IWorldGenerator{
         if (oldIDs) {
             this.forceConfigIDs();
 
-            logger.info("forcing");
+            cpw.mods.fml.common.FMLLog.info("forcing");
             this.runningConfigIDs = true;
         }
         if (forceRemap) {
             this.forceConfigIDs();
 
-            logger.info("forcing");
+            cpw.mods.fml.common.FMLLog.info("forcing");
             this.runningConfigIDs = true;
             forceRemap = false;
         }*/
@@ -782,7 +782,7 @@ public class UndergroundBiomes implements IWorldGenerator{
                 {
                     recipes.set(i, (ShapedOreRecipe)shapedConstr.newInstance(recipe, replacements));
                     numReplaced++;
-                    System.out.println("Changed shaped recipe for " + output.getDisplayName());
+                    cpw.mods.fml.common.FMLLog.info("Changed shaped recipe for " + output.getDisplayName());
                 }
             }
             else if (obj instanceof ShapelessRecipes)
@@ -796,7 +796,7 @@ public class UndergroundBiomes implements IWorldGenerator{
                 {
                     recipes.set(i, (ShapelessOreRecipe)shapelessConstr.newInstance(recipe, replacements));
                     numReplaced++;
-                    System.out.println("Changed shapeless recipe for " + output.getDisplayName());
+                    cpw.mods.fml.common.FMLLog.info("Changed shapeless recipe for " + output.getDisplayName());
                 }
             }
             else if (obj instanceof ShapedOreRecipe)
@@ -805,7 +805,7 @@ public class UndergroundBiomes implements IWorldGenerator{
                 if (containsMatchReplaceInplace(true, recipe.getInput(), replaceStacks, replacements))
                 {
                     numReplaced++;
-                    System.out.println("Changed shaped ore recipe for " + output.getDisplayName());
+                    cpw.mods.fml.common.FMLLog.info("Changed shaped ore recipe for " + output.getDisplayName());
                 }
             }
             else if (obj instanceof ShapelessOreRecipe)
@@ -814,7 +814,7 @@ public class UndergroundBiomes implements IWorldGenerator{
                 if (containsMatchReplaceInplace(true, recipe.getInput(), replaceStacks, replacements))
                 {
                     numReplaced++;
-                    System.out.println("Changed shapeless ore recipe for " + output.getDisplayName());
+                    cpw.mods.fml.common.FMLLog.info("Changed shapeless ore recipe for " + output.getDisplayName());
                 }
             }
         }
@@ -1053,15 +1053,15 @@ public class UndergroundBiomes implements IWorldGenerator{
         WatchList forcing = configList();
         try {
             for (String warning: forcing.problems()) {
-                logger.info(warning);
+                cpw.mods.fml.common.FMLLog.info(warning);
             }
-            logger.info("forcing config IDs ");
+            cpw.mods.fml.common.FMLLog.info("forcing config IDs ");
             forcing.redoAsNeeded();
             for (String warning: forcing.problems()) {
-                logger.info(warning);
+                cpw.mods.fml.common.FMLLog.info(warning);
             }
         } catch (Exception e) {
-            logger.info("redoerror "+ e.toString());
+            cpw.mods.fml.common.FMLLog.info("redoerror "+ e.toString());
         }
 
         WatchList check = new WatchList();

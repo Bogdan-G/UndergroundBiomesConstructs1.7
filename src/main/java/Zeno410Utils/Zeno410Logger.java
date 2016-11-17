@@ -44,7 +44,7 @@ public class Zeno410Logger {
             ex.printStackTrace(System.err);
         }
     }
-    logger.info("Starting");
+    cpw.mods.fml.common.FMLLog.info("Starting");
     return logger;
   }
 

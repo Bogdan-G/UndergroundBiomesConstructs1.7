@@ -8,6 +8,8 @@ import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlock
 import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlockList;
 import java.util.HashMap;
 
+import org.eclipse.collections.impl.map.mutable.UnifiedMap;
+
 /**
  * This class can record locations where UB Constructs codes are used
  * Currently used for caching codes when blocks are destroyed
@@ -15,7 +17,7 @@ import java.util.HashMap;
  * @author Zeno410
  */
 public class UBCodeLocations {
-    private HashMap<BlockLocation,UndergroundBiomesBlock> stored = new HashMap<BlockLocation,UndergroundBiomesBlock>();
+    private UnifiedMap<BlockLocation,UndergroundBiomesBlock> stored = new UnifiedMap<BlockLocation,UndergroundBiomesBlock>();
 
     public void add(int x, int y, int z, UndergroundBiomesBlock ubBlock) {
         BlockLocation location = BlockLocation.fetch(x,y,z);

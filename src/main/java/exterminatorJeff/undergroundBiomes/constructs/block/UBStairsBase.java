@@ -42,6 +42,7 @@ public class UBStairsBase extends BlockStairs implements ITileEntityProvider{
         this.isBlockContainer = false;
         this.setCreativeTab(null);
         this.setBlockName("stairs");
+        this.setHarvestLevel("pickaxe", 2);
     }
 
     @Override

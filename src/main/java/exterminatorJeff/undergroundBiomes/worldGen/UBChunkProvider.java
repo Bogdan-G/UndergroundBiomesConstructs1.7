@@ -28,7 +28,7 @@ public class UBChunkProvider extends ChunkProviderWrapper {
     public UBChunkProvider(IChunkProvider toWrap, BiomeUndergroundDecorator _decorator, int dimension){
         super(toWrap);
 
-        logger.info("UB generation wrapping " + toWrap.toString());
+        cpw.mods.fml.common.FMLLog.info("UB generation wrapping " + toWrap.toString());
         decorator = _decorator;
         this.dimension = dimension;
     }

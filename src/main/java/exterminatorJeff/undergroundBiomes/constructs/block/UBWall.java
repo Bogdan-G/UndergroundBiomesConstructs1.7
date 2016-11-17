@@ -34,6 +34,7 @@ public class UBWall extends BlockWall {
         this.isBlockContainer = false;
         this.setCreativeTab(UndergroundBiomes.tabModBlocks);
         this.setBlockName("wall");
+        this.setHarvestLevel("pickaxe", 2);
     }
     
     @Override

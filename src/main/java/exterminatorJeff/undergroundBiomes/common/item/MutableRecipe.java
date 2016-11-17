@@ -23,9 +23,9 @@ public class MutableRecipe {
         }
         current = newRecipe;
         if (current == null) {
-            logger.info("null recipe");
+            cpw.mods.fml.common.FMLLog.info("null recipe");
         } else {
-            logger.info(current.getRecipeOutput().getDisplayName());
+            cpw.mods.fml.common.FMLLog.info(current.getRecipeOutput().getDisplayName());
         }
         if (current != null) {
             CraftingManager.getInstance().getRecipeList().add(current);

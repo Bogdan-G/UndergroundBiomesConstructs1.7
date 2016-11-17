@@ -55,7 +55,7 @@ public class DimensionManager implements UBSetProviderRegistry{
         @Override
         public void accept(Boolean accepted) {
             inChunkGeneration = accepted;
-            logger.info("Dimensional in-chunk "+accepted);
+            cpw.mods.fml.common.FMLLog.info("Dimensional in-chunk "+accepted);
         }
 
     };
@@ -155,7 +155,7 @@ public class DimensionManager implements UBSetProviderRegistry{
         // Sometimes can get called before onWorldLoad, wtf?
         WorldGenManager worldGen = worldGenManager(id);
         /*if (worldGen == null) {
-            System.out.println("UndergroundBiomes warning: onBiomeDecorate before onWorldLoad! Ignoring.");
+            cpw.mods.fml.common.FMLLog.info("UndergroundBiomes warning: onBiomeDecorate before onWorldLoad! Ignoring.");
             return;
         }*/
         //logger.info("decorating dimension "+ id );
@@ -183,7 +183,7 @@ public class DimensionManager implements UBSetProviderRegistry{
         // Sometimes can get called before onWorldLoad, wtf?
         WorldGenManager worldGen = worldGenManager(id);
         /*if (worldGen == null) {
-            System.out.println("UndergroundBiomes warning: onBiomeDecorate before onWorldLoad! Ignoring.");
+            cpw.mods.fml.common.FMLLog.info("UndergroundBiomes warning: onBiomeDecorate before onWorldLoad! Ignoring.");
             return;
         }*/
         //logger.info("decorating dimension "+ id );
@@ -220,7 +220,7 @@ public class DimensionManager implements UBSetProviderRegistry{
                 if (!includeDimensionIDs.isIncluded(id, excludeDimensionIDs)) continue;
 
                 //serverList[i].getGameRules().setOrCreateGameRule("mobGriefing", "true");
-                logger.info("UB dimension setup "+inChunkGeneration);
+                cpw.mods.fml.common.FMLLog.info("UB dimension setup "+inChunkGeneration);
                 // do nothing if we're not supposed to use inchunk generation in this dimension
                 if (!inChunkGeneration()) return;
                 if (!inChunkGenerationIncludeIDs.isIncluded(id, inChunkGenerationExcludeIDs)) continue;

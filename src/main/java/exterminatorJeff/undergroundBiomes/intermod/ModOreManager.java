@@ -22,7 +22,7 @@ public class ModOreManager {
             // Thermal Foundation
             Block thermalFoundationOreBlock = Block.getBlockFromName("ThermalFoundation:Ore");
             if (thermalFoundationOreBlock != null) {
-                logger.info("Thermal Foundation found");
+                cpw.mods.fml.common.FMLLog.info("Thermal Foundation found");
                 // install texturizers
                 texturizer.requestUBOreSetup(thermalFoundationOreBlock, 0, UBOreTexturizer.copper_overlay, "tile.thermalfoundation.ore.copper");
                 texturizer.requestUBOreSetup(thermalFoundationOreBlock, 1, UBOreTexturizer.tin_overlay, "tile.thermalfoundation.ore.tin");
@@ -55,7 +55,7 @@ public class ModOreManager {
                     String name = (String) key;
                     Block named = Block.getBlockFromName(name);
                     int id = Block.getIdFromBlock(named);
-                    logger.info(name + " "+id);
+                    cpw.mods.fml.common.FMLLog.info(name + " "+id);
                     if (name.contains("projectred.exploration.ore")) {
                         projectRedBlock = named;
                         break;

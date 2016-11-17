@@ -39,14 +39,14 @@ public class ConfigManager<Type extends Settings> {
             worldConfigFile = newFile;
             if (usable(worldConfigFile)) {
                 // usable world
-                    logger.info(worldConfigFile.getPath());
+                    cpw.mods.fml.common.FMLLog.info(worldConfigFile.getPath());
                 if (newFile.exists()) {
                     worldSpecific = new Configuration(worldConfigFile);
-                    logger.info("exists ");
+                    cpw.mods.fml.common.FMLLog.info("exists ");
                     worldSpecific.load();
                     settings.readFrom(worldSpecific);
                 } else {
-                    logger.info("doesn't exist");
+                    cpw.mods.fml.common.FMLLog.info("doesn't exist");
                     worldSpecific = new Configuration(worldConfigFile);
                     // else we use the default;
                     settings.readFrom(general);
@@ -54,7 +54,7 @@ public class ConfigManager<Type extends Settings> {
                 }
                 worldSpecific.save();
             } else {
-                logger.info("null file");
+                cpw.mods.fml.common.FMLLog.info("null file");
                 worldSpecific = null;
                 settings.readFrom(general);
             }
@@ -69,7 +69,7 @@ public class ConfigManager<Type extends Settings> {
         String configName = generalConfigFile.getPath();
         String generalConfigDirectoryName = generalConfigFile.getParentFile().getPath();
         String detailName = configName.substring(generalConfigDirectoryName.length()+1);
-        logger.info("Filename "+detailName);
+        cpw.mods.fml.common.FMLLog.info("Filename "+detailName);
         File localConfigFile = new File(configDirectory,detailName);
         setWorldConfigFile(localConfigFile);
     }
@@ -77,7 +77,7 @@ public class ConfigManager<Type extends Settings> {
     public void clearWorldFile() {
         worldConfigFile = null;
         worldSpecific = null;
-        logger.info("clearing ");
+        cpw.mods.fml.common.FMLLog.info("clearing ");
     }
 
     public void setWorldFile(WorldServer server) {
@@ -113,14 +113,14 @@ public class ConfigManager<Type extends Settings> {
             worldConfigFile = newFile;
             if (usable(worldConfigFile)) {
                 // usable world
-                    logger.info(worldConfigFile.getPath());
+                    cpw.mods.fml.common.FMLLog.info(worldConfigFile.getPath());
                 if (newFile.exists()) {
                     worldSpecific = new Configuration(worldConfigFile);
-                    logger.info("exists ");
+                    cpw.mods.fml.common.FMLLog.info("exists ");
                     worldSpecific.load();
                     settings.readFrom(worldSpecific);
                 } else {
-                    logger.info("doesn't exist");
+                    cpw.mods.fml.common.FMLLog.info("doesn't exist");
                     worldSpecific = new Configuration(worldConfigFile);
                     // else we use the default;
                     settings.readFrom(general);
@@ -128,7 +128,7 @@ public class ConfigManager<Type extends Settings> {
                 }
                 worldSpecific.save();
             } else {
-                logger.info("null file");
+                cpw.mods.fml.common.FMLLog.info("null file");
                 worldSpecific = null;
                 settings.readFrom(general);
             }
@@ -138,14 +138,14 @@ public class ConfigManager<Type extends Settings> {
     public void setWorldFile(File newFile) {
         // this is the world save directory
         String configDirectoryName = newFile.getAbsoluteFile()+File.separator+CONFIG_DIRECTORY;
-        logger.info("Directory name "+configDirectoryName);
+        cpw.mods.fml.common.FMLLog.info("Directory name "+configDirectoryName);
         File configDirectory = fileNamed(configDirectoryName);
         configDirectory.mkdir();
 
         String configName = generalConfigFile.getPath();
         String generalConfigDirectoryName = generalConfigFile.getParentFile().getPath();
         String detailName = configName.substring(generalConfigDirectoryName.length()+1);
-        logger.info("Filename "+detailName);
+        cpw.mods.fml.common.FMLLog.info("Filename "+detailName);
         String localConfigFileName = configDirectoryName + File.separator+ detailName;
         File localConfigFile = fileNamed(localConfigFileName);
         setWorldConfigFile(localConfigFile);

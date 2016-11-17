@@ -2,6 +2,8 @@ package exterminatorJeff.undergroundBiomes.constructs.util;
 import Zeno410Utils.Zeno410Logger;
 import java.util.HashSet;
 import java.util.logging.Logger;
+
+import org.eclipse.collections.impl.set.mutable.primitive.IntHashSet;
 /**
  * This class contains the logic for manipulating sets of dimensions in
  * the context of mod config setup
@@ -9,7 +11,7 @@ import java.util.logging.Logger;
  */
 public class DimensionSet {
     private final boolean ignore;
-    private HashSet<Integer> members = new HashSet<Integer>();
+    private IntHashSet members = new IntHashSet();
     private static Logger logger = new Zeno410Logger("DimensionSet").logger();
 
     public static class Include extends DimensionSet {

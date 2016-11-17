@@ -24,7 +24,7 @@ public class BlockLister {
         for (Object name: sortedKeys) {
             Object block = Block.blockRegistry.getObject(name);
             int ID = Block.blockRegistry.getIDForObject(block);
-            logger.info(""+ID+","+name+","+block.toString());
+            cpw.mods.fml.common.FMLLog.info(""+ID+","+name+","+block.toString());
         }
 
     }

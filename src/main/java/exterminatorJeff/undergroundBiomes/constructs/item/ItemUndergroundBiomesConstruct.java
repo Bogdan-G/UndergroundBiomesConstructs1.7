@@ -106,12 +106,12 @@ public abstract class ItemUndergroundBiomesConstruct extends ItemMultiTexture {
     public Block structure() {return this.structure;}
 
     public void testRegistration() {
-        logger.info( structure().toString());
-        logger.info( Block.getBlockById(Block.getIdFromBlock(structure())).toString());
-        logger.info( ""+Item.getIdFromItem(this));
-        logger.info(""+Block.getIdFromBlock(structure()));
-        logger.info(""+Block.getIdFromBlock(structure()));
-        logger.info( Item.getItemById(Block.getIdFromBlock(structure())).toString());
+        cpw.mods.fml.common.FMLLog.info( structure().toString());
+        cpw.mods.fml.common.FMLLog.info( Block.getBlockById(Block.getIdFromBlock(structure())).toString());
+        cpw.mods.fml.common.FMLLog.info( ""+Item.getIdFromItem(this));
+        cpw.mods.fml.common.FMLLog.info(""+Block.getIdFromBlock(structure()));
+        cpw.mods.fml.common.FMLLog.info(""+Block.getIdFromBlock(structure()));
+        cpw.mods.fml.common.FMLLog.info( Item.getItemById(Block.getIdFromBlock(structure())).toString());
     }
 
 /*

@@ -41,6 +41,7 @@ public class UBButtonBase extends BlockButton implements ITileEntityProvider{
         this.isBlockContainer = false;
         this.setCreativeTab(null);
         this.setBlockName("button");
+        this.setHarvestLevel("pickaxe", 2);
     }
     @Override
     public void registerBlockIcons(IIconRegister arg0) {

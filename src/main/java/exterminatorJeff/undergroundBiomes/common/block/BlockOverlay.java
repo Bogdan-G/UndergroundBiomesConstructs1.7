@@ -58,7 +58,7 @@ public class BlockOverlay extends Block{
         Map sprites = accessor.get(textureMap);
         Set names = sprites.keySet();
         for (Object name: names) {
-            logger.info(name.toString());
+            cpw.mods.fml.common.FMLLog.info(name.toString());
         }
     }
 }

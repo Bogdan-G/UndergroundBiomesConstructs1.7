@@ -31,6 +31,7 @@ public class BlockStoneSlab extends BlockSlab {
     public BlockStoneSlab(boolean isDouble, Block refBlock,NamedSlabPair pairName){
         super(isDouble, refBlock.getMaterial());
         this.setCreativeTab(isDouble ? null : UndergroundBiomes.tabModBlocks);
+        this.setHarvestLevel("pickaxe", 2);
         isDoubleSlab = isDouble;
         referenceBlock = (BlockMetadataBase)refBlock;
         this.useNeighborBrightness = true;

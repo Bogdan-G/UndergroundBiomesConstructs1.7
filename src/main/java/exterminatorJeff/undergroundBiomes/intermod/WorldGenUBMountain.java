@@ -57,7 +57,7 @@ public class WorldGenUBMountain extends WorldGenerator
     	int radius = height;
         BlockCodes snowBlock = new BlockCodes(Blocks.snow,0);
         BlockCodes sandstoneBlock = new BlockCodes(Blocks.sandstone,0);
-    	//System.out.println("H:"+height+" X:"+locX+" Z:"+locZ);
+    	//cpw.mods.fml.common.FMLLog.info("H:"+height+" X:"+locX+" Z:"+locZ);
         UBStrataColumnProvider columnProvider =
                     UBAPIHook.ubAPIHook.dimensionalStrataColumnProvider
                     .ubStrataColumnProvider(world.provider.dimensionId);

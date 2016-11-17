@@ -32,6 +32,7 @@ public class UBButton extends BlockButton {
         baseStone = material;
         this.lowerMetadata = lowerMetadata;
         this.setCreativeTab(UndergroundBiomes.tabModBlocks);
+        this.setHarvestLevel("pickaxe", 2);
     }
     public final int blockMetadata(int worldMetadata) {
         return lowerMetadata;

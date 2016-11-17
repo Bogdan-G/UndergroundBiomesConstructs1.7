@@ -43,6 +43,7 @@ public class UBWallBase extends BlockWall  implements ITileEntityProvider{
         //this.setCreativeTab(UndergroundBiomes.tabModBlocks);
         this.setCreativeTab(null);
         this.setBlockName("wall");
+        this.setHarvestLevel("pickaxe", 2);
     }
 
     public void register() {

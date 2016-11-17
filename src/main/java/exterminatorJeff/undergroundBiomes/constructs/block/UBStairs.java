@@ -38,6 +38,7 @@ public class UBStairs extends BlockStairs {
         this.lowerMetadata = lowerMetadata;
         this.setCreativeTab(UndergroundBiomes.tabModBlocks);
         this.lightOpacity = 1;
+        this.setHarvestLevel("pickaxe", 2);
     }
 
     public final int blockMetadata(int worldMetadata) {

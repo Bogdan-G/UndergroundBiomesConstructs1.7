@@ -122,7 +122,7 @@ public class UndergroundBiomesConstructs {
     public ArrayList<BlockMetadataBase> baseBlocks() {
         ArrayList<BlockMetadataBase> result = new ArrayList<BlockMetadataBase>();
         result.add(UndergroundBiomes.igneousStone);
-        System.out.println(UndergroundBiomes.igneousStone.getUnlocalizedName());
+        cpw.mods.fml.common.FMLLog.info(UndergroundBiomes.igneousStone.getUnlocalizedName());
         result.add(UndergroundBiomes.igneousCobblestone);
         result.add(UndergroundBiomes.igneousStoneBrick);
         result.add(UndergroundBiomes.metamorphicStone);

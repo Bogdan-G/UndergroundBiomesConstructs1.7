@@ -8,12 +8,14 @@ import net.minecraft.item.Item;
 import net.minecraft.util.ObjectIntIdentityMap;
 import net.minecraft.util.RegistryNamespaced;
 
+import org.eclipse.collections.impl.map.mutable.UnifiedMap;
+
 /**
  * This class is for checking up on and redoing problematic registry entries
  * @author Zeno410
  */
 public class WatchList {
-    private HashMap<Object,Watchable> items = new HashMap<Object,Watchable>();
+    private UnifiedMap<Object,Watchable> items = new UnifiedMap<Object,Watchable>();
 
     private static Accessor<RegistryNamespaced,ObjectIntIdentityMap> intRegistryAccess =
             new Accessor<RegistryNamespaced,ObjectIntIdentityMap>(RegistryNamespaced.class);
@@ -71,7 +73,7 @@ public class WatchList {
 
 
     public void clear() {
-        items = new HashMap<Object,Watchable>();
+        items = new UnifiedMap<Object,Watchable>();
     }
 
 

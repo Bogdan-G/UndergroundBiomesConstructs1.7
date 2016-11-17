@@ -30,7 +30,7 @@ public class OreUBifyRequester implements UBOreTexturizer {
 
     @Deprecated
     public void setupUBOre(Block oreBlock, int metadata, String overlayName, FMLPreInitializationEvent event) {
-        logger.info("setup attempt");
+        cpw.mods.fml.common.FMLLog.info("setup attempt");
         assert(oreBlock != null);
         assert(metadata >=0);
         assert(metadata < 16);
@@ -40,12 +40,12 @@ public class OreUBifyRequester implements UBOreTexturizer {
 
     @Deprecated
     public void requestUBOreSetup(Block oreBlock, int metadata, String overlayName) throws BlocksAreAlreadySet {
-        logger.info("setup request for "+oreBlock.getLocalizedName()+ " "+overlayName);
+        cpw.mods.fml.common.FMLLog.info("setup request for "+oreBlock.getLocalizedName()+ " "+overlayName);
         assert(oreBlock != null);
         assert(metadata >=0);
         assert(metadata < 16);
         assert(overlayName != null);
-        logger.info("request OK");
+        cpw.mods.fml.common.FMLLog.info("request OK");
         waitingRequests.add(new UBifyRequestWithMetadata(oreBlock,metadata,overlayName));
     }
 
@@ -58,7 +58,7 @@ public class OreUBifyRequester implements UBOreTexturizer {
     }
 
     public void requestUBOreSetup(Block oreBlock, int metadata, String overlayName, String blockName) throws BlocksAreAlreadySet {
-        logger.info("setup request for "+oreBlock.getLocalizedName()+ " : "+blockName + " " + overlayName);
+        cpw.mods.fml.common.FMLLog.info("setup request for "+oreBlock.getLocalizedName()+ " : "+blockName + " " + overlayName);
         assert(oreBlock != null);
         assert(metadata >=0);
         assert(metadata < 16);
@@ -68,10 +68,10 @@ public class OreUBifyRequester implements UBOreTexturizer {
             properName = minecraftName(oreBlock, metadata);
             if (!properName.legit()) {
                 new MinecraftName(blockName);
-                logger.info(blockName +" not found in the language tables");
+                cpw.mods.fml.common.FMLLog.info(blockName +" not found in the language tables");
             }
         }
-        logger.info("request OK");
+        cpw.mods.fml.common.FMLLog.info("request OK");
         waitingRequests.add(new UBifyRequestWithMetadata(oreBlock,metadata,overlayName,properName));
     }
     
@@ -137,10 +137,10 @@ public class OreUBifyRequester implements UBOreTexturizer {
 
     private static MinecraftName minecraftName(Block block, int meta) {
         if (block instanceof MetalBlock) {
-            logger.info(((MetalBlock)block).getUnlocalizedName(meta) + " " + meta);
-            logger.info(((MetalBlock)block).getUnlocalizedName(0) + " " + 0);
-            logger.info(((MetalBlock)block).getUnlocalizedName(1) + " " + 1);
-            logger.info(((MetalBlock)block).getUnlocalizedName(2) + " " + 2);
+            cpw.mods.fml.common.FMLLog.info(((MetalBlock)block).getUnlocalizedName(meta) + " " + meta);
+            cpw.mods.fml.common.FMLLog.info(((MetalBlock)block).getUnlocalizedName(0) + " " + 0);
+            cpw.mods.fml.common.FMLLog.info(((MetalBlock)block).getUnlocalizedName(1) + " " + 1);
+            cpw.mods.fml.common.FMLLog.info(((MetalBlock)block).getUnlocalizedName(2) + " " + 2);
             return new MinecraftName(((MetalBlock)block).getUnlocalizedName(meta));
         }
         return new MinecraftName(block.getUnlocalizedName());

@@ -391,13 +391,13 @@ public class BiomeUndergroundDecorator {
         for (int i = 0 ;i < biomes.length; i++) {
             BiomeGenBase biome = biomes[i];
             if (biome != null) {
-                logger.info(biome.biomeName + " " + biome.toString());
+                cpw.mods.fml.common.FMLLog.info(biome.biomeName + " " + biome.toString());
                 BiomeDecorator currentDecorator = biome.theBiomeDecorator;
                 for (BiomeDecoratorCorrector corrector: this.correctors) {
                     BiomeDecorator newDecorator = corrector.corrected(biome,currentDecorator);
                     if (newDecorator != currentDecorator) {
                         // the corrector wants a change
-                        logger.info("changing");
+                        cpw.mods.fml.common.FMLLog.info("changing");
                         biome.theBiomeDecorator = newDecorator;
                         // we're done
                         break;
@@ -450,7 +450,7 @@ public class BiomeUndergroundDecorator {
         public BiomeDecorator corrected(BiomeGenBase biome, BiomeDecorator currentDecorator) {
             //if ((currentDecorator.getClass().equals(standardDecoratorClass))) {
             if ((currentDecorator instanceof BiomeDecoratorHighlands)&&!(currentDecorator instanceof CorrectedBiomeDecorator)) {
-                logger.info("corrected decorator for "+biome.biomeName);
+                cpw.mods.fml.common.FMLLog.info("corrected decorator for "+biome.biomeName);
 
                 return new CorrectedBiomeDecoratorHighlands(biome,(BiomeDecoratorHighlands)currentDecorator);
             }
