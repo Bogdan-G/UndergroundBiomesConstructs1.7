@@ -10,7 +10,7 @@ import net.minecraft.world.World;
  *
  * @author Zeno410
  */
-abstract public class ReferredRecipe implements IRecipe{
+abstract public class ReferredRecipe implements IRecipe, java.io.Serializable{
 
     abstract public IRecipe referred();
 

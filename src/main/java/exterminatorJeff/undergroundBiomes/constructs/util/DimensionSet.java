@@ -9,7 +9,7 @@ import org.eclipse.collections.impl.set.mutable.primitive.IntHashSet;
  * the context of mod config setup
  * @author Zeno410
  */
-public class DimensionSet {
+public class DimensionSet implements java.io.Serializable {
     private final boolean ignore;
     private IntHashSet members = new IntHashSet();
     private static Logger logger = new Zeno410Logger("DimensionSet").logger();

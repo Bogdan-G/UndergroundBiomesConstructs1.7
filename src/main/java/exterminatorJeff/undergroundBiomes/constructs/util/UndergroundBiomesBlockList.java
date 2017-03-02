@@ -9,7 +9,7 @@ import net.minecraft.block.Block;
  *
  * @author Zeno410
  */
-public class UndergroundBiomesBlockList {
+public class UndergroundBiomesBlockList implements java.io.Serializable {
     // namespace for references into the underground biome block system
 
     public static final int detailedBlockCount = 7*8; // number of different type including the subcategories

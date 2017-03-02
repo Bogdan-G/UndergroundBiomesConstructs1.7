@@ -6,7 +6,7 @@ import net.minecraft.util.ChunkCoordinates;
  *
  * @author Zeno410
  */
-public class PlaneLocation {
+public class PlaneLocation implements java.io.Serializable {
     public final int x;
     public final int z;
 

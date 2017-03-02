@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
  *
  * @author Zeno410
  */
-public class MethodAccessor<ObjectType>{
+public class MethodAccessor<ObjectType> implements java.io.Serializable {
     private Method method;
     private final String methodName;
     public MethodAccessor(String _fieldName) {

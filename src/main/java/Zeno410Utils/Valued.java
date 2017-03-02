@@ -5,7 +5,7 @@ package Zeno410Utils;
  *
  * @author Zeno410
  */
-public class Valued<Type> implements Comparable<Valued<Type>> {
+public class Valued<Type> implements Comparable<Valued<Type>>, java.io.Serializable {
     private double value;
     private Type item;
 

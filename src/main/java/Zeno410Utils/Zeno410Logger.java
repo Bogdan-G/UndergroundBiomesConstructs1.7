@@ -13,7 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-public class Zeno410Logger {
+public class Zeno410Logger implements java.io.Serializable {
   static private FileHandler fileTxt;
   static private SimpleFormatter formatterTxt;
 

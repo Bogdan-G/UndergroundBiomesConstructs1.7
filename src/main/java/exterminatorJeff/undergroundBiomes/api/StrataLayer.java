@@ -3,7 +3,7 @@ package exterminatorJeff.undergroundBiomes.api;
 import exterminatorJeff.undergroundBiomes.api.NamedBlock;
 import exterminatorJeff.undergroundBiomes.api.UBStoneCodes;
 
-public class StrataLayer{
+public class StrataLayer implements java.io.Serializable {
     public final NamedBlock layerBlock;
     public final int layerMetadataID, layerMin, layerMax;
     public final UBStoneCodes codes;

@@ -7,7 +7,7 @@ import net.minecraft.block.Block;
  *
  * @author Zeno410
  */
-public class BlockState {
+public class BlockState implements java.io.Serializable {
     public final Block block;
     public final int metadata;
 

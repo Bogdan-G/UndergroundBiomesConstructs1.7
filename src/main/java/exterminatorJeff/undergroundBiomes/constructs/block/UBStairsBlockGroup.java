@@ -91,7 +91,7 @@ public class UBStairsBlockGroup extends UBStairsGroup {
         }
     }
 
-    private static class UBStairsSet {
+    private static class UBStairsSet implements java.io.Serializable {
         // a group of UBStairs blocks covering one type of stone
         UBStairs zeroOne;
         UBStairs twoThree;

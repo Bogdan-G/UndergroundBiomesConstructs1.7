@@ -13,7 +13,7 @@ import net.minecraft.world.storage.ISaveHandler;
  *
  * @author Zeno410
  */
-public class ShamWorld extends World {
+public class ShamWorld extends World implements java.io.Serializable {
     private int shamMetadata;
 
     //static ISaveHandler iSaveHandler = null;

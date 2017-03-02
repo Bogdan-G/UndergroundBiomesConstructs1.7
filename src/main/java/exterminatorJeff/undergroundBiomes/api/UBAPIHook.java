@@ -7,7 +7,7 @@ import exterminatorJeff.undergroundBiomes.api.UBSetProviderRegistry;
  *
  * @author Zeno410
  */
-public class UBAPIHook {
+public class UBAPIHook implements java.io.Serializable {
     public static final UBAPIHook ubAPIHook = new UBAPIHook();
     public UBDimensionalStrataColumnProvider dimensionalStrataColumnProvider; // set in the main Underground Biomes
     public UBOreTexturizer ubOreTexturizer;

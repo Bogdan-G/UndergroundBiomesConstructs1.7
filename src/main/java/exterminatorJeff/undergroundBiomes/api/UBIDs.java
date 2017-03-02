@@ -11,7 +11,7 @@ import net.minecraft.util.RegistryNamespaced;
  * A shell for various constants
  * @author Zeno410
  */
-public class UBIDs {
+public class UBIDs implements java.io.Serializable {
 
     public final static int version = 3;
 

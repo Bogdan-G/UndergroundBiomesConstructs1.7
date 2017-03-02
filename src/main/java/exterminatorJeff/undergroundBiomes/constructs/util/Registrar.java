@@ -13,7 +13,7 @@ import net.minecraft.item.Item;
  * I was having some trouble with that during development. Currently not used.
  * @author Zeno410
  */
-public class Registrar {
+public class Registrar implements java.io.Serializable {
 
     public static final Registrar instance  = new Registrar();
 

@@ -16,7 +16,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 
-public abstract class UBConstructGroup {
+public abstract class UBConstructGroup implements java.io.Serializable {
         public Integer constructID;
         //public int baseID;
         public BlockMetadataBase baseBlock;

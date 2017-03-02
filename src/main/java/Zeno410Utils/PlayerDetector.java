@@ -18,7 +18,7 @@ import net.minecraftforge.common.MinecraftForge;
  * @author Zeno410
  */
 
-public class PlayerDetector {
+public class PlayerDetector implements java.io.Serializable {
     private HashMap<PlayerID,EntityPlayerMP> activePlayers = new HashMap<PlayerID,EntityPlayerMP>();
     private HashSet<Acceptor<EntityPlayerMP>> onLogin = new HashSet<Acceptor<EntityPlayerMP>>();
     private HashSet<Acceptor<EntityPlayerMP>> onLogout = new HashSet<Acceptor<EntityPlayerMP>>();

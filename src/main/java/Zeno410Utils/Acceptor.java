@@ -5,7 +5,7 @@ package Zeno410Utils;
  *
  * @author Zeno410
  */
-public abstract class Acceptor<Type> {
+public abstract class Acceptor<Type> implements java.io.Serializable {
     public abstract void accept(Type accepted);
 
     public static class Ignorer<IgnoredType> extends Acceptor<IgnoredType> {

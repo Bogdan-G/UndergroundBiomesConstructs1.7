@@ -9,7 +9,7 @@ import java.io.DataOutput;
  *
  * @author Zeno410
  */
-public class Named<Type> {
+public class Named<Type> implements java.io.Serializable {
     public String name;
     public Type object;
     /** Creates a new instance of Named */

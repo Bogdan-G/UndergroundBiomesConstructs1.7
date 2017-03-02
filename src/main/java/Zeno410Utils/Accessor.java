@@ -5,7 +5,7 @@ import java.lang.reflect.Field;
  *
  * @author Zeno410
  */
-public class Accessor<ObjectType, FieldType>{
+public class Accessor<ObjectType, FieldType>  implements java.io.Serializable {
     private Field field;
     private final Class FieldTypeVar;
     public Accessor(Class _FieldType) {

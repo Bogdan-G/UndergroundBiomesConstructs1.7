@@ -5,7 +5,7 @@ package Zeno410Utils;
  *
  * @author Zeno410
  */
-public class Pair<TypeA,TypeB> {
+public class Pair<TypeA,TypeB> implements java.io.Serializable {
     public TypeA a;
     public TypeB b;
 

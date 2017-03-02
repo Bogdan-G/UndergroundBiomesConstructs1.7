@@ -9,7 +9,7 @@ import net.minecraft.util.IIcon;
  * @author Zeno410
  */
 
-public class UndergroundBiomesBlock {
+public class UndergroundBiomesBlock implements java.io.Serializable {
     // A hook that lets us get to one particular block
     public final BlockMetadataBase ubBlock;
     public final int metadata;

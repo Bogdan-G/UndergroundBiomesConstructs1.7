@@ -18,7 +18,7 @@ import net.minecraft.entity.player.EntityPlayer;
  *
  * @author Zeno410
  */
-public class PlayerID {
+public class PlayerID implements java.io.Serializable {
 
     private String name;
 

@@ -3,7 +3,7 @@ package exterminatorJeff.undergroundBiomes.api;
 /**
  * Base class for all noise generators
  */
-public abstract class NoiseGenerator {
+public abstract class NoiseGenerator implements java.io.Serializable {
     protected final int perm[] = new int[512];
     protected double offsetX;
     protected double offsetY;

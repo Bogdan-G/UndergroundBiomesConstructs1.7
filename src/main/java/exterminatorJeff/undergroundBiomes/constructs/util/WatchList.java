@@ -14,7 +14,7 @@ import org.eclipse.collections.impl.map.mutable.UnifiedMap;
  * This class is for checking up on and redoing problematic registry entries
  * @author Zeno410
  */
-public class WatchList {
+public class WatchList implements java.io.Serializable {
     private UnifiedMap<Object,Watchable> items = new UnifiedMap<Object,Watchable>();
 
     private static Accessor<RegistryNamespaced,ObjectIntIdentityMap> intRegistryAccess =

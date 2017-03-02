@@ -16,7 +16,7 @@ import org.eclipse.collections.impl.map.mutable.UnifiedMap;
  * Perhaps will be used to replace Tile Entities someday
  * @author Zeno410
  */
-public class UBCodeLocations {
+public class UBCodeLocations implements java.io.Serializable {
     private UnifiedMap<BlockLocation,UndergroundBiomesBlock> stored = new UnifiedMap<BlockLocation,UndergroundBiomesBlock>();
 
     public void add(int x, int y, int z, UndergroundBiomesBlock ubBlock) {

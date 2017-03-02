@@ -24,7 +24,7 @@ import net.minecraftforge.common.config.Property;
  * Streaming has an implicit and not-currently-enforced contract to have a fixed order of Settings
  * @author Zeno410
  */
-abstract public class Settings implements Streamable {
+abstract public class Settings implements Streamable, java.io.Serializable {
     private ArrayList<Setting> settings = new ArrayList<Setting>();
     private HashMap<String,Category> categories = new HashMap<String,Category>();
 

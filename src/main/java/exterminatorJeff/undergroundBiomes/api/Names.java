@@ -2,7 +2,7 @@ package exterminatorJeff.undergroundBiomes.api;
 
 import exterminatorJeff.undergroundBiomes.api.UBIDs;
 
-public class Names {
+public class Names implements java.io.Serializable {
 
     private final String internal;
 

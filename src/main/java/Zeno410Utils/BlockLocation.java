@@ -8,7 +8,7 @@ package Zeno410Utils;
  * This class is for keying maps of objects to Minecraft locations
  * @author Zeno410
  */
-public class BlockLocation {
+public class BlockLocation implements java.io.Serializable {
     private int x;
     private int y;
     private int z;

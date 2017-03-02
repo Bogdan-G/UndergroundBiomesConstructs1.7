@@ -6,7 +6,7 @@ import java.lang.reflect.Field;
  *
  * @author Zeno410
  */
-public class AccessInt <ObjectType>{
+public class AccessInt <ObjectType> implements java.io.Serializable {
         private Field field;
         private final String fieldName;
         public AccessInt(String _fieldName) {

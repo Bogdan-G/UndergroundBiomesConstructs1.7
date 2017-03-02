@@ -7,7 +7,7 @@ import net.minecraft.util.StatCollector;
  *
  * @author Zeno410
  */
-public class MinecraftName {
+public class MinecraftName implements java.io.Serializable {
     private final String unlocalized;
     public MinecraftName(String unlocalized) {
         this.unlocalized = unlocalized;

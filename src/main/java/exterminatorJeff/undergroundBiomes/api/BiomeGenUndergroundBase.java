@@ -5,7 +5,7 @@ import exterminatorJeff.undergroundBiomes.api.PerlinNoiseGenerator;
 import exterminatorJeff.undergroundBiomes.api.StrataLayer;
 import exterminatorJeff.undergroundBiomes.api.UBStoneCodes;
 
-public class BiomeGenUndergroundBase {
+public class BiomeGenUndergroundBase implements java.io.Serializable {
     
     
     public String biomeName = "";

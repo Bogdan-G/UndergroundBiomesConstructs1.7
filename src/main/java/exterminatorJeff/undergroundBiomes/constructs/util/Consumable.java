@@ -4,7 +4,7 @@ package exterminatorJeff.undergroundBiomes.constructs.util;
  * For one-use items so they aren't accidentally reused
  * @author Zeno410
  */
-public class Consumable<Type> {
+public class Consumable<Type> implements java.io.Serializable {
     private final Type item;
     private boolean used = false;
     public Consumable(Type _item) {item = _item;}
