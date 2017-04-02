@@ -97,9 +97,16 @@ public abstract class BlockMetadataBase extends BlockStone {
     }
 
     public void getSubBlocks(Item id, CreativeTabs tabs, List list){
-        for (int i = 0; i < 8; i++){
-            list.add(new ItemStack(id, 1, i));
-        } 
+        //for (int i = 0; i < 8; i++){
+            list.add(new ItemStack(id, 1, 0));
+            list.add(new ItemStack(id, 1, 1));
+            list.add(new ItemStack(id, 1, 2));
+            list.add(new ItemStack(id, 1, 3));
+            list.add(new ItemStack(id, 1, 4));
+            list.add(new ItemStack(id, 1, 5));
+            list.add(new ItemStack(id, 1, 6));
+            list.add(new ItemStack(id, 1, 7));
+        //} 
     }
 
     @Override
@@ -158,11 +165,10 @@ public abstract class BlockMetadataBase extends BlockStone {
         {
             // Fortune III gives up to 4 items
             int j = world.rand.nextInt(fortune + 2);
-            count = (j < 1) ? 1 : j;
+            if (j > 1) count = j;
         }
-        for(int i = 0; i < count; i++){
-            ret.add(stack);
-        }
+        ret.add(stack);
+        if (count > 1) for(int i = 1; i < count; i++) ret.add(stack);
         return ret;
     }
 
